@@ -28,6 +28,17 @@ jobs:
       - name: Build packages
         run: bun run build
 
+      - name: Force Snapshot Bump
+        run: |
+          cat << EOF > .changeset/force-snapshot.md
+          ---
+          "@adn-ui/react": patch
+          "@adn-ui/styles": patch
+          ---
+
+          Force snapshot build
+          EOF
+
       - name: Create and Publish Canary
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
