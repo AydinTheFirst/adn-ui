@@ -6,6 +6,7 @@ export const fieldVariants = tv({
     description: "field__description",
     error: "field__error",
     label: "label field__label",
+    group: "field__group",
     root: "field",
   },
 });

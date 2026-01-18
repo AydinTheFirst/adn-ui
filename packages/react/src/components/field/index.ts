@@ -1,8 +1,16 @@
-import { FieldControl, FieldDescription, FieldError, FieldLabel, FieldRoot } from "./field";
+import {
+  FieldControl,
+  FieldDescription,
+  FieldError,
+  FieldGroup,
+  FieldLabel,
+  FieldRoot,
+} from "./field";
 
 export const Field = Object.assign(FieldRoot, {
   Control: FieldControl,
   Description: FieldDescription,
+  Group: FieldGroup,
   Error: FieldError,
   Label: FieldLabel,
   Root: FieldRoot,

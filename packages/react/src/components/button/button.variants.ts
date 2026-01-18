@@ -22,6 +22,7 @@ export const buttonVariants = tv({
       outline: "button--outline",
       primary: "button--primary",
       secondary: "button--secondary",
+      field: "button--field",
     },
   },
 });

@@ -10,3 +10,19 @@
 .field__error {
   @apply text-sm text-red-600;
 }
+
+.field__group {
+  @apply inline-flex items-center rounded border;
+
+  & :first-child {
+    @apply rounded-none rounded-s border-0;
+  }
+
+  & :last-child {
+    @apply rounded-none rounded-e border-0;
+  }
+
+  & .input {
+    @apply rounded-l-none rounded-r-none border-0;
+  }
+}

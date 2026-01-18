@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Button, Card, cardVariants, Field, Form } from "@adn-ui/react";
+import { LucideUser } from "lucide-react";
 
 const meta: Meta<typeof Card> = {
   args: {
@@ -30,7 +31,12 @@ export const Default: Story = {
         <Form onSubmit={(e) => e.preventDefault()}>
           <Field.Root required>
             <Field.Label>Username</Field.Label>
-            <Field.Control placeholder="Enter your username" />
+            <Field.Group>
+              <Button variant="field">
+                <LucideUser />
+              </Button>
+              <Field.Control placeholder="Enter your username" />
+            </Field.Group>
             <Field.Description>This is a description text.</Field.Description>
             <Field.Error />
           </Field.Root>

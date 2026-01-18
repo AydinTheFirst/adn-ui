@@ -1,7 +1,7 @@
 "use client";
 
 import { Field as BaseField } from "@base-ui/react";
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import { cn } from "tailwind-variants";
 
 import { FieldContext } from "./field.context";
@@ -55,4 +55,13 @@ export const FieldError = ({ className, ...props }: FieldErrorProps) => {
   const { slots } = useField();
 
   return <BaseField.Error className={cn(className, slots.error())} {...props} />;
+};
+
+// Group
+export interface FieldGroupProps extends React.ComponentProps<"div"> {}
+
+export const FieldGroup = ({ className, ...props }: FieldGroupProps) => {
+  const { slots } = useField();
+
+  return <div className={cn(className, slots.group())} {...props} />;
 };

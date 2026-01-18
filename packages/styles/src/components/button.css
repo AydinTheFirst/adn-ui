@@ -2,9 +2,9 @@
 .button {
   @apply cursor-pointer;
 
-  @apply border-border inline-flex items-center justify-center gap-2 rounded font-medium text-nowrap;
+  @apply inline-flex items-center justify-center gap-2 rounded border font-medium text-nowrap;
 
-  @apply w-fit px-3 py-2;
+  @apply w-fit px-3;
 
   @apply transition-[scale,background-color] motion-reduce:transition-none;
 
@@ -63,6 +63,10 @@
 
 .button--ghost {
   @apply text-foreground hover-safe:bg-secondary border-0 bg-transparent;
+}
+
+.button--field {
+  @apply bg-input text-input-foreground hover-safe:bg-input/90;
 }
 
 .button--icon-only {
