@@ -1,7 +1,7 @@
 {
   "name": "@adn-ui/react",
   "version": "0.0.0",
-  "description": "FeaUI React - A lightweight, accessible React component library built on top of Base UI",
+  "description": "AdnUI React - A lightweight, accessible React component library built on top of Base UI",
   "keywords": [
     "adn-ui",
     "components",
