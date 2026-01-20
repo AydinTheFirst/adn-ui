@@ -12,8 +12,6 @@ export interface CardRootProps extends CardVariants, React.ComponentProps<"div">
 export const CardRoot = ({ className, variant, ...props }: CardRootProps) => {
   const slots = useMemo(() => cardVariants({ variant }), [variant]);
 
-  console.log(slots);
-
   return (
     <CardContext.Provider value={{ slots }}>
       <div
