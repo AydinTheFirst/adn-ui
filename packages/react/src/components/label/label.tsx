@@ -9,6 +9,6 @@ export interface LabelProps extends LabelVariants, React.ComponentProps<"label">
 export const Label = ({ className, ...props }: LabelProps) => {
   const styles = labelVariants();
 
-  // biome-ignore lint/a11y/noLabelWithoutControl: <label> is used as a generic label component
+  // oxlint-disable-next-line jsx_a11y/label-has-associated-control
   return <label className={cn(className, styles)} {...props} />;
 };

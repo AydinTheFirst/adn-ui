@@ -64,10 +64,14 @@ export const TooltipArrow = ({ className, ...props }: TooltipArrowProps) => {
 // Title
 export interface TooltipTitleProps extends React.ComponentProps<"h4"> {}
 
-export const TooltipTitle = ({ className, ...props }: TooltipTitleProps) => {
+export const TooltipTitle = ({ className, children, ...props }: TooltipTitleProps) => {
   const { slots } = useTooltip();
 
-  return <h4 className={cn(className, slots.title())} {...props} />;
+  return (
+    <h4 className={cn(className, slots.title())} {...props}>
+      {children}
+    </h4>
+  );
 };
 
 // Description

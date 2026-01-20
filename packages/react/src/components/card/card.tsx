@@ -41,10 +41,14 @@ export interface CardFooterProps extends React.ComponentProps<"div"> {}
 
 export interface CardTitle extends React.ComponentProps<"h2"> {}
 
-export const CardTitle = ({ className, ...props }: CardTitle) => {
+export const CardTitle = ({ className, children, ...props }: CardTitle) => {
   const { slots } = useCard();
 
-  return <h2 className={cn(className, slots.title())} {...props} />;
+  return (
+    <h2 className={cn(className, slots.title())} {...props}>
+      {children}
+    </h2>
+  );
 };
 
 export interface CardDescriptionProps extends React.ComponentProps<"p"> {}
