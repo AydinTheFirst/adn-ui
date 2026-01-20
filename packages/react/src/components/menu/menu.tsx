@@ -27,7 +27,12 @@ export interface MenuTriggerProps extends MenuVariants, BaseMenu.Trigger.Props {
 export const MenuTrigger = ({ className, ...props }: MenuTriggerProps) => {
   const { slots } = useMenu();
 
-  return <BaseMenu.Trigger className={cn(slots.trigger(), className)} {...props} />;
+  return (
+    <BaseMenu.Trigger
+      className={cn(slots.trigger(), className)}
+      {...props}
+    />
+  );
 };
 
 // Portal
@@ -35,7 +40,12 @@ export interface MenuPortalProps extends MenuVariants, BaseMenu.Portal.Props {}
 
 export const MenuPortal = ({ className, ...props }: MenuPortalProps) => {
   const { slots } = useMenu();
-  return <BaseMenu.Portal className={cn(slots.portal(), className)} {...props} />;
+  return (
+    <BaseMenu.Portal
+      className={cn(slots.portal(), className)}
+      {...props}
+    />
+  );
 };
 
 // Backdrop
@@ -43,7 +53,12 @@ export interface MenuBackdropProps extends MenuVariants, BaseMenu.Backdrop.Props
 
 export const MenuBackdrop = ({ className, ...props }: MenuBackdropProps) => {
   const { slots } = useMenu();
-  return <BaseMenu.Backdrop className={cn(slots.backdrop(), className)} {...props} />;
+  return (
+    <BaseMenu.Backdrop
+      className={cn(slots.backdrop(), className)}
+      {...props}
+    />
+  );
 };
 
 // Positioner
@@ -51,7 +66,12 @@ export interface MenuPositionerProps extends MenuVariants, BaseMenu.Positioner.P
 
 export const MenuPositioner = ({ className, ...props }: MenuPositionerProps) => {
   const { slots } = useMenu();
-  return <BaseMenu.Positioner className={cn(slots.positioner(), className)} {...props} />;
+  return (
+    <BaseMenu.Positioner
+      className={cn(slots.positioner(), className)}
+      {...props}
+    />
+  );
 };
 
 // Popup
@@ -59,7 +79,12 @@ export interface MenuPopupProps extends MenuVariants, BaseMenu.Popup.Props {}
 
 export const MenuPopup = ({ className, ...props }: MenuPopupProps) => {
   const { slots } = useMenu();
-  return <BaseMenu.Popup className={cn(slots.popup(), className)} {...props} />;
+  return (
+    <BaseMenu.Popup
+      className={cn(slots.popup(), className)}
+      {...props}
+    />
+  );
 };
 
 // Arrow
@@ -67,7 +92,12 @@ export interface MenuArrowProps extends MenuVariants, BaseMenu.Arrow.Props {}
 
 export const MenuArrow = ({ className, ...props }: MenuArrowProps) => {
   const { slots } = useMenu();
-  return <BaseMenu.Arrow className={cn(slots.arrow(), className)} {...props} />;
+  return (
+    <BaseMenu.Arrow
+      className={cn(slots.arrow(), className)}
+      {...props}
+    />
+  );
 };
 
 // Item
@@ -75,7 +105,12 @@ export interface MenuItemProps extends MenuVariants, BaseMenu.Item.Props {}
 
 export const MenuItem = ({ className, ...props }: MenuItemProps) => {
   const { slots } = useMenu();
-  return <BaseMenu.Item className={cn(slots.item(), className)} {...props} />;
+  return (
+    <BaseMenu.Item
+      className={cn(slots.item(), className)}
+      {...props}
+    />
+  );
 };
 
 // Separator
@@ -83,7 +118,12 @@ export interface MenuSeparatorProps extends MenuVariants, BaseMenu.Separator.Pro
 
 export const MenuSeparator = ({ className, ...props }: MenuSeparatorProps) => {
   const { slots } = useMenu();
-  return <BaseMenu.Separator className={cn(slots.separator(), className)} {...props} />;
+  return (
+    <BaseMenu.Separator
+      className={cn(slots.separator(), className)}
+      {...props}
+    />
+  );
 };
 
 // Group
@@ -91,7 +131,12 @@ export interface MenuGroupProps extends MenuVariants, BaseMenu.Group.Props {}
 
 export const MenuGroup = ({ className, ...props }: MenuGroupProps) => {
   const { slots } = useMenu();
-  return <BaseMenu.Group className={cn(slots.group(), className)} {...props} />;
+  return (
+    <BaseMenu.Group
+      className={cn(slots.group(), className)}
+      {...props}
+    />
+  );
 };
 
 // Group Label
@@ -99,7 +144,12 @@ export interface MenuGroupLabelProps extends MenuVariants, BaseMenu.GroupLabel.P
 
 export const MenuGroupLabel = ({ className, ...props }: MenuGroupLabelProps) => {
   const { slots } = useMenu();
-  return <BaseMenu.GroupLabel className={cn(slots.groupLabel(), className)} {...props} />;
+  return (
+    <BaseMenu.GroupLabel
+      className={cn(slots.groupLabel(), className)}
+      {...props}
+    />
+  );
 };
 
 // RadioGroup
@@ -107,7 +157,12 @@ export interface MenuRadioGroupProps extends MenuVariants, BaseMenu.RadioGroup.P
 
 export const MenuRadioGroup = ({ className, ...props }: MenuRadioGroupProps) => {
   const { slots } = useMenu();
-  return <BaseMenu.RadioGroup className={cn(slots.radioGroup(), className)} {...props} />;
+  return (
+    <BaseMenu.RadioGroup
+      className={cn(slots.radioGroup(), className)}
+      {...props}
+    />
+  );
 };
 
 // RadioItem
@@ -115,7 +170,12 @@ export interface MenuRadioItemProps extends MenuVariants, BaseMenu.RadioItem.Pro
 
 export const MenuRadioItem = ({ className, ...props }: MenuRadioItemProps) => {
   const { slots } = useMenu();
-  return <BaseMenu.RadioItem className={cn(slots.radioItem(), className)} {...props} />;
+  return (
+    <BaseMenu.RadioItem
+      className={cn(slots.radioItem(), className)}
+      {...props}
+    />
+  );
 };
 
 // CheckboxItem
@@ -123,7 +183,12 @@ export interface MenuCheckboxItemProps extends MenuVariants, BaseMenu.CheckboxIt
 
 export const MenuCheckboxItem = ({ className, ...props }: MenuCheckboxItemProps) => {
   const { slots } = useMenu();
-  return <BaseMenu.CheckboxItem className={cn(slots.checkboxItem(), className)} {...props} />;
+  return (
+    <BaseMenu.CheckboxItem
+      className={cn(slots.checkboxItem(), className)}
+      {...props}
+    />
+  );
 };
 
 // Submenu
@@ -138,5 +203,10 @@ export interface MenuSubmenuTriggerProps extends MenuVariants, BaseMenu.SubmenuT
 
 export const MenuSubmenuTrigger = ({ className, ...props }: MenuSubmenuTriggerProps) => {
   const { slots } = useMenu();
-  return <BaseMenu.SubmenuTrigger className={cn(slots.submenuTrigger(), className)} {...props} />;
+  return (
+    <BaseMenu.SubmenuTrigger
+      className={cn(slots.submenuTrigger(), className)}
+      {...props}
+    />
+  );
 };

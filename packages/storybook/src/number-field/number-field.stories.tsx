@@ -17,8 +17,12 @@ export const Default: Story = {
     const id = useId();
 
     return (
-      <div className="flex h-screen items-center justify-center">
-        <NumberField {...args} defaultValue={100} id={id}>
+      <div className='flex h-screen items-center justify-center'>
+        <NumberField
+          {...args}
+          defaultValue={100}
+          id={id}
+        >
           <NumberField.ScrubArea>
             <Label htmlFor={id}>Number Field</Label>
             <NumberField.ScrubAreaCursor />

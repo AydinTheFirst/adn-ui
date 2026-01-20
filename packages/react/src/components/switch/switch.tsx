@@ -16,7 +16,10 @@ export const SwitchRoot = ({ className, size, ...props }: SwitchProps) => {
 
   return (
     <SwitchContext.Provider value={{ slots }}>
-      <BaseSwitch.Root className={cn(className, slots.root())} {...props} />
+      <BaseSwitch.Root
+        className={cn(className, slots.root())}
+        {...props}
+      />
     </SwitchContext.Provider>
   );
 };
@@ -25,5 +28,10 @@ export const SwitchRoot = ({ className, size, ...props }: SwitchProps) => {
 export const SwitchThumb = ({ className, ...props }: BaseSwitch.Thumb.Props) => {
   const { slots } = useSwitch();
 
-  return <BaseSwitch.Thumb className={cn(className, slots.thumb())} {...props} />;
+  return (
+    <BaseSwitch.Thumb
+      className={cn(className, slots.thumb())}
+      {...props}
+    />
+  );
 };

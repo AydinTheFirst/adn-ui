@@ -16,7 +16,10 @@ export const ScrollAreaRoot = ({ className, ...props }: ScrollAreaProps) => {
 
   return (
     <ScrollAreaContext.Provider value={{ slots }}>
-      <BaseScrollArea.Root className={cn(className, slots.root())} {...props} />
+      <BaseScrollArea.Root
+        className={cn(className, slots.root())}
+        {...props}
+      />
     </ScrollAreaContext.Provider>
   );
 };
@@ -26,7 +29,12 @@ export interface ScrollAreaViewportProps extends BaseScrollArea.Viewport.Props {
 
 export const ScrollAreaViewport = ({ className, ...props }: ScrollAreaViewportProps) => {
   const { slots } = useScrollArea();
-  return <BaseScrollArea.Viewport className={cn(slots.viewport(), className)} {...props} />;
+  return (
+    <BaseScrollArea.Viewport
+      className={cn(slots.viewport(), className)}
+      {...props}
+    />
+  );
 };
 
 // Content
@@ -34,7 +42,12 @@ export interface ScrollAreaContentProps extends BaseScrollArea.Content.Props {}
 
 export const ScrollAreaContent = ({ className, ...props }: ScrollAreaContentProps) => {
   const { slots } = useScrollArea();
-  return <BaseScrollArea.Content className={cn(slots.content(), className)} {...props} />;
+  return (
+    <BaseScrollArea.Content
+      className={cn(slots.content(), className)}
+      {...props}
+    />
+  );
 };
 
 // Scrollbar
@@ -42,7 +55,12 @@ export interface ScrollAreaScrollbarProps extends BaseScrollArea.Scrollbar.Props
 
 export const ScrollAreaScrollbar = ({ className, ...props }: ScrollAreaScrollbarProps) => {
   const { slots } = useScrollArea();
-  return <BaseScrollArea.Scrollbar className={cn(slots.scrollbar(), className)} {...props} />;
+  return (
+    <BaseScrollArea.Scrollbar
+      className={cn(slots.scrollbar(), className)}
+      {...props}
+    />
+  );
 };
 
 // Thumb
@@ -50,5 +68,10 @@ export interface ScrollAreaThumbProps extends BaseScrollArea.Thumb.Props {}
 
 export const ScrollAreaThumb = ({ className, ...props }: ScrollAreaThumbProps) => {
   const { slots } = useScrollArea();
-  return <BaseScrollArea.Thumb className={cn(slots.thumb(), className)} {...props} />;
+  return (
+    <BaseScrollArea.Thumb
+      className={cn(slots.thumb(), className)}
+      {...props}
+    />
+  );
 };

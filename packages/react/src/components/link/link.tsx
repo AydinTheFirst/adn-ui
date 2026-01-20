@@ -10,7 +10,10 @@ export const Link = ({ className, variant, children, ...props }: LinkProps) => {
   const styles = linkVariants({ variant });
 
   return (
-    <a className={cn(className, styles)} {...props}>
+    <a
+      className={cn(className, styles)}
+      {...props}
+    >
       {children}
     </a>
   );

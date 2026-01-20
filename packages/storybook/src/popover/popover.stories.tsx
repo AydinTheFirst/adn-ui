@@ -13,7 +13,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   render: (args) => (
-    <Container className="center">
+    <Container className='center'>
       <Popover.Root {...args}>
         <Popover.Trigger className={iconButtonVariants()}>
           <LucideBell />

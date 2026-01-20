@@ -16,7 +16,10 @@ export const ProgressRoot = ({ className, variant, size, ...props }: ProgressPro
 
   return (
     <ProgressContext value={{ slots }}>
-      <BaseProgress.Root className={cn(className, slots.root())} {...props} />
+      <BaseProgress.Root
+        className={cn(className, slots.root())}
+        {...props}
+      />
     </ProgressContext>
   );
 };
@@ -26,28 +29,48 @@ export interface ProgressLabelProps extends BaseProgress.Label.Props {}
 
 export const ProgressLabel = ({ className, ...props }: ProgressLabelProps) => {
   const { slots } = useProgress();
-  return <BaseProgress.Label className={cn(className, slots.label())} {...props} />;
+  return (
+    <BaseProgress.Label
+      className={cn(className, slots.label())}
+      {...props}
+    />
+  );
 };
 
 // Value
 export interface ProgressValueProps extends BaseProgress.Value.Props {}
 export const ProgressValue = ({ className, ...props }: ProgressValueProps) => {
   const { slots } = useProgress();
-  return <BaseProgress.Value className={cn(className, slots.value())} {...props} />;
+  return (
+    <BaseProgress.Value
+      className={cn(className, slots.value())}
+      {...props}
+    />
+  );
 };
 
 // Track
 export interface ProgressTrackProps extends BaseProgress.Track.Props {}
 export const ProgressTrack = ({ className, ...props }: ProgressTrackProps) => {
   const { slots } = useProgress();
-  return <BaseProgress.Track className={cn(className, slots.track())} {...props} />;
+  return (
+    <BaseProgress.Track
+      className={cn(className, slots.track())}
+      {...props}
+    />
+  );
 };
 
 // Indicator
 export interface ProgressIndicatorProps extends BaseProgress.Indicator.Props {}
 export const ProgressIndicator = ({ className, ...props }: ProgressIndicatorProps) => {
   const { slots } = useProgress();
-  return <BaseProgress.Indicator className={cn(className, slots.indicator())} {...props} />;
+  return (
+    <BaseProgress.Indicator
+      className={cn(className, slots.indicator())}
+      {...props}
+    />
+  );
 };
 
 // Exports

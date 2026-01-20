@@ -16,6 +16,11 @@ export const Spinner = ({ className, size, variant, ...props }: SpinnerProps) =>
   const styles = spinnerVariants({ size, variant });
 
   return (
-    <LucideLoader aria-label="Loading" className={cn(className, styles)} role="status" {...props} />
+    <LucideLoader
+      aria-label='Loading'
+      className={cn(className, styles)}
+      role='status'
+      {...props}
+    />
   );
 };

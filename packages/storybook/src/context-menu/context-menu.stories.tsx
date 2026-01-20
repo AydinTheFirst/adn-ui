@@ -13,9 +13,9 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {},
   render: (args) => (
-    <div className="flex h-screen items-center justify-center">
+    <div className='flex h-screen items-center justify-center'>
       <ContextMenu {...args}>
-        <ContextMenu.Trigger className="btn">Right Click Me</ContextMenu.Trigger>
+        <ContextMenu.Trigger className='btn'>Right Click Me</ContextMenu.Trigger>
         <ContextMenu.Portal>
           <ContextMenu.Positioner>
             <ContextMenu.Popup>

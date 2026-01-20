@@ -29,7 +29,7 @@ export const Default: Story = {
           <Drawer.Popup>
             <Drawer.Title>Drawer Title</Drawer.Title>
             <Drawer.Description>This is a description for the drawer component.</Drawer.Description>
-            <div className="my-4">
+            <div className='my-4'>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi blanditiis placeat
               itaque! Corrupti amet rem explicabo iusto ducimus saepe molestiae esse illum eum,
               magni asperiores culpa voluptas mollitia odio blanditiis.

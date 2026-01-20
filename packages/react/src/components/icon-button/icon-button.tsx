@@ -11,5 +11,10 @@ export type IconButtonProps = IconButtonVariants & React.ComponentProps<typeof B
 export const IconButton = ({ className, variant, size, isIconOnly, ...props }: IconButtonProps) => {
   const styles = iconButtonVariants({ isIconOnly, size, variant });
 
-  return <Button className={cn(className, styles)} {...props} />;
+  return (
+    <Button
+      className={cn(className, styles)}
+      {...props}
+    />
+  );
 };

@@ -7,8 +7,6 @@
     "build": "storybook build",
     "deploy": "gh-pages -d storybook-static",
     "dev": "BROWSER=none storybook dev -p 6006",
-    "format": "oxfmt",
-    "lint": "oxlint",
     "start": "serve storybook-static -p 6006",
     "type-check": "tsc --noEmit"
   },
@@ -32,8 +30,6 @@
     "@vitejs/plugin-react": "^5.1.1",
     "babel-plugin-react-compiler": "^1.0.0",
     "globals": "^16.5.0",
-    "oxfmt": "^0.24.0",
-    "oxlint": "^1.39.0",
     "serve": "^14.2.5",
     "storybook": "^10.1.10",
     "typescript": "~5.9.3",

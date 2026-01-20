@@ -12,7 +12,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 function Container({ children }: React.PropsWithChildren) {
-  return <div className="flex h-screen flex-col items-center justify-center">{children}</div>;
+  return <div className='flex h-screen flex-col items-center justify-center'>{children}</div>;
 }
 
 export const Default: Story = {
@@ -20,7 +20,7 @@ export const Default: Story = {
     <Container>
       <Field.Root {...args}>
         <Field.Label>Username</Field.Label>
-        <Field.Control placeholder="Enter your username" />
+        <Field.Control placeholder='Enter your username' />
         <Field.Description>This is a description text.</Field.Description>
         <Field.Error />
       </Field.Root>
@@ -34,11 +34,11 @@ export const WithGroup: Story = {
       <Field.Root {...args}>
         <Field.Label>Options</Field.Label>
         <Field.Group>
-          <Button variant="field">
+          <Button variant='field'>
             <LucideUser />
           </Button>
-          <Field.Control placeholder="Enter your username" />
-          <Button variant="field">
+          <Field.Control placeholder='Enter your username' />
+          <Button variant='field'>
             <LucideUser />
           </Button>
         </Field.Group>

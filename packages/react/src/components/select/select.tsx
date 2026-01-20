@@ -28,7 +28,12 @@ export interface SelectTriggerProps extends BaseSelect.Trigger.Props {}
 export const SelectTrigger = ({ className, ...props }: SelectTriggerProps) => {
   const { slots } = useSelect();
 
-  return <BaseSelect.Trigger className={cn(slots.trigger(), className)} {...props} />;
+  return (
+    <BaseSelect.Trigger
+      className={cn(slots.trigger(), className)}
+      {...props}
+    />
+  );
 };
 
 export interface SelectIconProps extends BaseSelect.Icon.Props {}
@@ -37,7 +42,10 @@ export interface SelectIconProps extends BaseSelect.Icon.Props {}
 export const SelectIcon = ({ className, children, ...props }: SelectIconProps) => {
   const { slots } = useSelect();
   return (
-    <BaseSelect.Icon className={cn(slots.icon(), className)} {...props}>
+    <BaseSelect.Icon
+      className={cn(slots.icon(), className)}
+      {...props}
+    >
       {children || <ChevronsUpDown />}
     </BaseSelect.Icon>
   );
@@ -48,7 +56,12 @@ export interface SelectValueProps extends BaseSelect.Value.Props {}
 
 export const SelectValue = ({ className, ...props }: SelectValueProps) => {
   const { slots } = useSelect();
-  return <BaseSelect.Value className={cn(slots.value(), className)} {...props} />;
+  return (
+    <BaseSelect.Value
+      className={cn(slots.value(), className)}
+      {...props}
+    />
+  );
 };
 
 // Portal
@@ -63,7 +76,12 @@ export interface SelectBackdropProps extends BaseSelect.Backdrop.Props {}
 
 export const SelectBackdrop = ({ className, ...props }: SelectBackdropProps) => {
   const { slots } = useSelect();
-  return <BaseSelect.Backdrop className={cn(slots.backdrop(), className)} {...props} />;
+  return (
+    <BaseSelect.Backdrop
+      className={cn(slots.backdrop(), className)}
+      {...props}
+    />
+  );
 };
 
 // Positioner
@@ -71,7 +89,12 @@ export interface SelectPositionerProps extends BaseSelect.Positioner.Props {}
 
 export const SelectPositioner = ({ className, ...props }: SelectPositionerProps) => {
   const { slots } = useSelect();
-  return <BaseSelect.Positioner className={cn(slots.positioner(), className)} {...props} />;
+  return (
+    <BaseSelect.Positioner
+      className={cn(slots.positioner(), className)}
+      {...props}
+    />
+  );
 };
 
 // Popup
@@ -79,7 +102,12 @@ export interface SelectPopupProps extends BaseSelect.Popup.Props {}
 
 export const SelectPopup = ({ className, ...props }: SelectPopupProps) => {
   const { slots } = useSelect();
-  return <BaseSelect.Popup className={cn(slots.popup(), className)} {...props} />;
+  return (
+    <BaseSelect.Popup
+      className={cn(slots.popup(), className)}
+      {...props}
+    />
+  );
 };
 
 // Arrow
@@ -87,7 +115,12 @@ export interface SelectArrowProps extends BaseSelect.Arrow.Props {}
 
 export const SelectArrow = ({ className, ...props }: SelectArrowProps) => {
   const { slots } = useSelect();
-  return <BaseSelect.Arrow className={cn(slots.arrow(), className)} {...props} />;
+  return (
+    <BaseSelect.Arrow
+      className={cn(slots.arrow(), className)}
+      {...props}
+    />
+  );
 };
 
 // List
@@ -95,7 +128,12 @@ export interface SelectListProps extends BaseSelect.List.Props {}
 
 export const SelectList = ({ className, ...props }: SelectListProps) => {
   const { slots } = useSelect();
-  return <BaseSelect.List className={cn(slots.list(), className)} {...props} />;
+  return (
+    <BaseSelect.List
+      className={cn(slots.list(), className)}
+      {...props}
+    />
+  );
 };
 
 // ItemIndicator
@@ -108,7 +146,10 @@ export const SelectItemIndicator = ({
 }: SelectItemIndicatorProps) => {
   const { slots } = useSelect();
   return (
-    <BaseSelect.ItemIndicator className={cn(slots.itemIndicator(), className)} {...props}>
+    <BaseSelect.ItemIndicator
+      className={cn(slots.itemIndicator(), className)}
+      {...props}
+    >
       {children || <Check />}
     </BaseSelect.ItemIndicator>
   );
@@ -118,7 +159,12 @@ export const SelectItemIndicator = ({
 export interface SelectItemTextProps extends BaseSelect.ItemText.Props {}
 
 export const SelectItemText = ({ className, ...props }: SelectItemTextProps) => {
-  return <BaseSelect.ItemText className={className} {...props} />;
+  return (
+    <BaseSelect.ItemText
+      className={className}
+      {...props}
+    />
+  );
 };
 
 // Item
@@ -126,7 +172,12 @@ export interface SelectItemProps extends BaseSelect.Item.Props {}
 
 export const SelectItem = ({ className, ...props }: SelectItemProps) => {
   const { slots } = useSelect();
-  return <BaseSelect.Item className={cn(slots.item(), className)} {...props} />;
+  return (
+    <BaseSelect.Item
+      className={cn(slots.item(), className)}
+      {...props}
+    />
+  );
 };
 
 // Group
@@ -134,7 +185,12 @@ export interface SelectGroupProps extends BaseSelect.Group.Props {}
 
 export const SelectGroup = ({ className, ...props }: SelectGroupProps) => {
   const { slots } = useSelect();
-  return <BaseSelect.Group className={cn(slots.group(), className)} {...props} />;
+  return (
+    <BaseSelect.Group
+      className={cn(slots.group(), className)}
+      {...props}
+    />
+  );
 };
 
 // GroupLabel
@@ -142,7 +198,12 @@ export interface SelectGroupLabelProps extends BaseSelect.GroupLabel.Props {}
 
 export const SelectGroupLabel = ({ className, ...props }: SelectGroupLabelProps) => {
   const { slots } = useSelect();
-  return <BaseSelect.GroupLabel className={cn(slots.groupLabel(), className)} {...props} />;
+  return (
+    <BaseSelect.GroupLabel
+      className={cn(slots.groupLabel(), className)}
+      {...props}
+    />
+  );
 };
 
 // Separator
@@ -150,5 +211,10 @@ export interface SelectSeparatorProps extends BaseSelect.Separator.Props {}
 
 export const SelectSeparator = ({ className, ...props }: SelectSeparatorProps) => {
   const { slots } = useSelect();
-  return <BaseSelect.Separator className={cn(slots.separator(), className)} {...props} />;
+  return (
+    <BaseSelect.Separator
+      className={cn(slots.separator(), className)}
+      {...props}
+    />
+  );
 };

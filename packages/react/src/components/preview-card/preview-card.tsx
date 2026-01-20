@@ -27,7 +27,12 @@ export interface PreviewCardTriggerProps extends BasePreviewCard.Trigger.Props {
 export const PreviewCardTrigger = ({ className, ...props }: PreviewCardTriggerProps) => {
   const { slots } = usePreviewCard();
 
-  return <BasePreviewCard.Trigger className={cn(slots.trigger(), className)} {...props} />;
+  return (
+    <BasePreviewCard.Trigger
+      className={cn(slots.trigger(), className)}
+      {...props}
+    />
+  );
 };
 
 // Portal
@@ -36,7 +41,12 @@ export interface PreviewCardPortalProps extends BasePreviewCard.Portal.Props {}
 export const PreviewCardPortal = ({ className, ...props }: PreviewCardPortalProps) => {
   const { slots } = usePreviewCard();
 
-  return <BasePreviewCard.Portal className={cn(slots.portal(), className)} {...props} />;
+  return (
+    <BasePreviewCard.Portal
+      className={cn(slots.portal(), className)}
+      {...props}
+    />
+  );
 };
 
 // Backdrop
@@ -45,7 +55,12 @@ export interface PreviewCardBackdropProps extends BasePreviewCard.Backdrop.Props
 export const PreviewCardBackdrop = ({ className, ...props }: PreviewCardBackdropProps) => {
   const { slots } = usePreviewCard();
 
-  return <BasePreviewCard.Backdrop className={cn(slots.backdrop(), className)} {...props} />;
+  return (
+    <BasePreviewCard.Backdrop
+      className={cn(slots.backdrop(), className)}
+      {...props}
+    />
+  );
 };
 
 // Positioner
@@ -54,7 +69,12 @@ export interface PreviewCardPositionerProps extends BasePreviewCard.Positioner.P
 export const PreviewCardPositioner = ({ className, ...props }: PreviewCardPositionerProps) => {
   const { slots } = usePreviewCard();
 
-  return <BasePreviewCard.Positioner className={cn(slots.positioner(), className)} {...props} />;
+  return (
+    <BasePreviewCard.Positioner
+      className={cn(slots.positioner(), className)}
+      {...props}
+    />
+  );
 };
 
 // Popup
@@ -63,7 +83,12 @@ export interface PreviewCardPopupProps extends BasePreviewCard.Popup.Props {}
 export const PreviewCardPopup = ({ className, ...props }: PreviewCardPopupProps) => {
   const { slots } = usePreviewCard();
 
-  return <BasePreviewCard.Popup className={cn(slots.popup(), className)} {...props} />;
+  return (
+    <BasePreviewCard.Popup
+      className={cn(slots.popup(), className)}
+      {...props}
+    />
+  );
 };
 
 // Arrow
@@ -72,5 +97,10 @@ export interface PreviewCardArrowProps extends BasePreviewCard.Arrow.Props {}
 export const PreviewCardArrow = ({ className, ...props }: PreviewCardArrowProps) => {
   const { slots } = usePreviewCard();
 
-  return <BasePreviewCard.Arrow className={cn(slots.arrow(), className)} {...props} />;
+  return (
+    <BasePreviewCard.Arrow
+      className={cn(slots.arrow(), className)}
+      {...props}
+    />
+  );
 };

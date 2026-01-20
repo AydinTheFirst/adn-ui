@@ -17,7 +17,10 @@ export const CollapsibleRoot = ({ className, ...props }: CollapsibleProps) => {
 
   return (
     <CollapsibleContext value={{ slots }}>
-      <BaseCollapsible.Root className={cn(className, slots.root())} {...props} />
+      <BaseCollapsible.Root
+        className={cn(className, slots.root())}
+        {...props}
+      />
     </CollapsibleContext>
   );
 };
@@ -27,7 +30,10 @@ export interface CollapsibleTriggerProps extends BaseCollapsible.Trigger.Props {
 export const CollapsibleTrigger = ({ className, children, ...props }: CollapsibleTriggerProps) => {
   const { slots } = useCollapsible();
   return (
-    <BaseCollapsible.Trigger className={cn(className, slots.trigger())} {...props}>
+    <BaseCollapsible.Trigger
+      className={cn(className, slots.trigger())}
+      {...props}
+    >
       {children}
     </BaseCollapsible.Trigger>
   );
@@ -37,7 +43,12 @@ export const CollapsibleTrigger = ({ className, children, ...props }: Collapsibl
 export interface CollapsibleTriggerIconProps extends React.ComponentProps<"svg"> {}
 export const CollapsibleTriggerIcon = ({ className, ...props }: CollapsibleTriggerIconProps) => {
   const { slots } = useCollapsible();
-  return <LucideChevronRight className={cn(className, slots.triggerIcon())} {...props} />;
+  return (
+    <LucideChevronRight
+      className={cn(className, slots.triggerIcon())}
+      {...props}
+    />
+  );
 };
 
 // Panel
@@ -45,7 +56,10 @@ export interface CollapsiblePanelProps extends BaseCollapsible.Panel.Props {}
 export const CollapsiblePanel = ({ className, children, ...props }: CollapsiblePanelProps) => {
   const { slots } = useCollapsible();
   return (
-    <BaseCollapsible.Panel className={cn(className, slots.panel())} {...props}>
+    <BaseCollapsible.Panel
+      className={cn(className, slots.panel())}
+      {...props}
+    >
       {children}
     </BaseCollapsible.Panel>
   );
@@ -55,5 +69,10 @@ export const CollapsiblePanel = ({ className, children, ...props }: CollapsibleP
 export interface CollapsibleContentProps extends React.HTMLAttributes<HTMLDivElement> {}
 export const CollapsibleContent = ({ className, ...props }: CollapsibleContentProps) => {
   const { slots } = useCollapsible();
-  return <div className={cn(className, slots.content())} {...props} />;
+  return (
+    <div
+      className={cn(className, slots.content())}
+      {...props}
+    />
+  );
 };

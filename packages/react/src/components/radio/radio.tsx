@@ -16,7 +16,10 @@ export const RadioRoot = ({ className, ...props }: RadioProps) => {
 
   return (
     <RadioContext value={{ slots }}>
-      <BaseRadio.Root className={cn(slots.root(), className)} {...props} />
+      <BaseRadio.Root
+        className={cn(slots.root(), className)}
+        {...props}
+      />
     </RadioContext>
   );
 };
@@ -26,5 +29,10 @@ export interface RadioIndicatorProps extends BaseRadio.Indicator.Props {}
 export const RadioIndicator = ({ className, ...props }: RadioIndicatorProps) => {
   const { slots } = useRadio();
 
-  return <BaseRadio.Indicator className={cn(slots.indicator(), className)} {...props} />;
+  return (
+    <BaseRadio.Indicator
+      className={cn(slots.indicator(), className)}
+      {...props}
+    />
+  );
 };

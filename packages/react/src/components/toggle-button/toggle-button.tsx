@@ -10,5 +10,10 @@ export interface ToggleButtonProps extends ToggleButtonVariants, BaseToggleProps
 export const ToggleButton = ({ className, variant, size, ...props }: ToggleButtonProps) => {
   const styles = toggleButtonVariants({ size, variant });
 
-  return <BaseToggle className={cn(className, styles)} {...props} />;
+  return (
+    <BaseToggle
+      className={cn(className, styles)}
+      {...props}
+    />
+  );
 };

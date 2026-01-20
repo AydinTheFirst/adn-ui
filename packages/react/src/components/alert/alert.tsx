@@ -16,7 +16,10 @@ export const AlertRoot = ({ className, variant, ...props }: AlertProps) => {
 
   return (
     <AlertContext value={{ slots, variant }}>
-      <div className={cn(className, slots.root())} {...props} />
+      <div
+        className={cn(className, slots.root())}
+        {...props}
+      />
     </AlertContext>
   );
 };
@@ -43,7 +46,10 @@ export const AlertIndicator = ({ className, children, ...props }: AlertIndicator
   };
 
   return (
-    <div className={cn(className, slots.indicator())} {...props}>
+    <div
+      className={cn(className, slots.indicator())}
+      {...props}
+    >
       <IndicatorIcon>{children}</IndicatorIcon>
     </div>
   );
@@ -55,7 +61,12 @@ export interface AlertContentProps extends React.ComponentProps<"div"> {}
 export const AlertContent = ({ className, ...props }: AlertContentProps) => {
   const { slots } = useAlert();
 
-  return <div className={cn(className, slots.content())} {...props} />;
+  return (
+    <div
+      className={cn(className, slots.content())}
+      {...props}
+    />
+  );
 };
 
 // Title
@@ -64,7 +75,12 @@ export interface AlertTitleProps extends React.ComponentProps<"div"> {}
 export const AlertTitle = ({ className, ...props }: AlertTitleProps) => {
   const { slots } = useAlert();
 
-  return <div className={cn(className, slots.title())} {...props} />;
+  return (
+    <div
+      className={cn(className, slots.title())}
+      {...props}
+    />
+  );
 };
 
 // Description
@@ -73,5 +89,10 @@ export interface AlertDescriptionProps extends React.ComponentProps<"div"> {}
 export const AlertDescription = ({ className, ...props }: AlertDescriptionProps) => {
   const { slots } = useAlert();
 
-  return <div className={cn(className, slots.description())} {...props} />;
+  return (
+    <div
+      className={cn(className, slots.description())}
+      {...props}
+    />
+  );
 };

@@ -5,5 +5,12 @@
   "experimentalSortImports": {},
   "experimentalSortPackageJson": {
     "sortScripts": true
-  }
+  },
+
+  "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "jsxSingleQuote": true,
+  "singleAttributePerLine": true
 }

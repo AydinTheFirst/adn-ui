@@ -22,8 +22,16 @@ export const Default: Story = {
     const id = useId();
 
     return (
-      <RadioGroup {...args} aria-label="Fruits" aria-labelledby={id} defaultValue="granny-smith">
-        <h3 className="mb-2 text-lg font-medium" id={id}>
+      <RadioGroup
+        {...args}
+        aria-label='Fruits'
+        aria-labelledby={id}
+        defaultValue='granny-smith'
+      >
+        <h3
+          className='mb-2 text-lg font-medium'
+          id={id}
+        >
           Select your favorite apple:
         </h3>
         {items.map((item) => (

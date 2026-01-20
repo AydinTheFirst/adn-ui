@@ -12,7 +12,7 @@ type Story = StoryObj<typeof Tooltip.Root>;
 
 export const Default: Story = {
   render: () => (
-    <div className="flex justify-center p-20">
+    <div className='flex justify-center p-20'>
       <Tooltip.Root>
         <Tooltip.Trigger className={buttonVariants()}>Hover me</Tooltip.Trigger>
         <Tooltip.Portal>

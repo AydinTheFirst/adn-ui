@@ -31,5 +31,10 @@ export const Underline: Story = {
 };
 
 export const Disabled: Story = {
-  render: (args) => <Link {...args} data-disabled />,
+  render: (args) => (
+    <Link
+      {...args}
+      data-disabled
+    />
+  ),
 };

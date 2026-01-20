@@ -12,8 +12,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   render: (args) => (
-    <div className="w-full max-w-md">
-      <Slider.Root {...args} defaultValue={25}>
+    <div className='w-full max-w-md'>
+      <Slider.Root
+        {...args}
+        defaultValue={25}
+      >
         <Slider.Control>
           <Slider.Track>
             <Slider.Indicator />
@@ -27,8 +30,11 @@ export const Default: Story = {
 
 export const RangeSlider: Story = {
   render: (args) => (
-    <div className="w-full max-w-md">
-      <Slider.Root {...args} defaultValue={[25, 75]}>
+    <div className='w-full max-w-md'>
+      <Slider.Root
+        {...args}
+        defaultValue={[25, 75]}
+      >
         <Slider.Control>
           <Slider.Track>
             <Slider.Indicator />

@@ -19,8 +19,11 @@ const fonts = [
 
 export const Default: Story = {
   render: (args) => (
-    <div className="flex h-screen items-center justify-center">
-      <Select {...args} items={fonts}>
+    <div className='flex h-screen items-center justify-center'>
+      <Select
+        {...args}
+        items={fonts}
+      >
         <Select.Trigger>
           <Select.Value />
           <Select.Icon />
@@ -32,7 +35,10 @@ export const Default: Story = {
               <Select.Arrow />
               <Select.List>
                 {fonts.map((font) => (
-                  <Select.Item key={font.value} value={font.value}>
+                  <Select.Item
+                    key={font.value}
+                    value={font.value}
+                  >
                     <Select.ItemIndicator />
                     <Select.ItemText>{font.label}</Select.ItemText>
                   </Select.Item>

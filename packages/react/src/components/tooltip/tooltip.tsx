@@ -26,7 +26,12 @@ export interface TooltipTriggerProps extends BaseTooltip.Trigger.Props {}
 export const TooltipTrigger = ({ className, ...props }: TooltipTriggerProps) => {
   const { slots } = useTooltip();
 
-  return <BaseTooltip.Trigger className={cn(className, slots.trigger())} {...props} />;
+  return (
+    <BaseTooltip.Trigger
+      className={cn(className, slots.trigger())}
+      {...props}
+    />
+  );
 };
 
 // Portal
@@ -34,7 +39,12 @@ export interface TooltipPortalProps extends BaseTooltip.Portal.Props {}
 export const TooltipPortal = ({ className, ...props }: TooltipPortalProps) => {
   const { slots } = useTooltip();
 
-  return <BaseTooltip.Portal className={cn(className, slots.portal())} {...props} />;
+  return (
+    <BaseTooltip.Portal
+      className={cn(className, slots.portal())}
+      {...props}
+    />
+  );
 };
 
 // Positioner
@@ -42,7 +52,12 @@ export interface TooltipPositionerProps extends BaseTooltip.Positioner.Props {}
 export const TooltipPositioner = ({ className, ...props }: TooltipPositionerProps) => {
   const { slots } = useTooltip();
 
-  return <BaseTooltip.Positioner className={cn(className, slots.positioner())} {...props} />;
+  return (
+    <BaseTooltip.Positioner
+      className={cn(className, slots.positioner())}
+      {...props}
+    />
+  );
 };
 
 // Popup
@@ -50,7 +65,12 @@ export interface TooltipPopupProps extends BaseTooltip.Popup.Props {}
 export const TooltipPopup = ({ className, ...props }: TooltipPopupProps) => {
   const { slots } = useTooltip();
 
-  return <BaseTooltip.Popup className={cn(className, slots.popup())} {...props} />;
+  return (
+    <BaseTooltip.Popup
+      className={cn(className, slots.popup())}
+      {...props}
+    />
+  );
 };
 
 // Arrow
@@ -58,7 +78,12 @@ export interface TooltipArrowProps extends BaseTooltip.Arrow.Props {}
 export const TooltipArrow = ({ className, ...props }: TooltipArrowProps) => {
   const { slots } = useTooltip();
 
-  return <BaseTooltip.Arrow className={cn(className, slots.arrow())} {...props} />;
+  return (
+    <BaseTooltip.Arrow
+      className={cn(className, slots.arrow())}
+      {...props}
+    />
+  );
 };
 
 // Title
@@ -68,7 +93,10 @@ export const TooltipTitle = ({ className, children, ...props }: TooltipTitleProp
   const { slots } = useTooltip();
 
   return (
-    <h4 className={cn(className, slots.title())} {...props}>
+    <h4
+      className={cn(className, slots.title())}
+      {...props}
+    >
       {children}
     </h4>
   );
@@ -80,5 +108,10 @@ export interface TooltipDescriptionProps extends React.ComponentProps<"p"> {}
 export const TooltipDescription = ({ className, ...props }: TooltipDescriptionProps) => {
   const { slots } = useTooltip();
 
-  return <p className={cn(className, slots.description())} {...props} />;
+  return (
+    <p
+      className={cn(className, slots.description())}
+      {...props}
+    />
+  );
 };

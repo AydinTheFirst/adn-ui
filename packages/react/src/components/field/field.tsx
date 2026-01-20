@@ -18,7 +18,11 @@ export const FieldRoot = ({ className, required, ...props }: FieldRootProps) => 
 
   return (
     <FieldContext value={{ required, slots }}>
-      <BaseField.Root className={cn(className, slots.root())} data-required={required} {...props} />
+      <BaseField.Root
+        className={cn(className, slots.root())}
+        data-required={required}
+        {...props}
+      />
     </FieldContext>
   );
 };
@@ -28,7 +32,12 @@ export interface FieldLabelProps extends BaseField.Label.Props {}
 export const FieldLabel = ({ className, ...props }: FieldLabelProps) => {
   const { slots } = useField();
 
-  return <BaseField.Label className={cn(className, slots.label())} {...props} />;
+  return (
+    <BaseField.Label
+      className={cn(className, slots.label())}
+      {...props}
+    />
+  );
 };
 
 // Control
@@ -37,7 +46,11 @@ export const FieldControl = ({ className, ...props }: FieldControlProps) => {
   const { slots, required } = useField();
 
   return (
-    <BaseField.Control className={cn(className, slots.control())} required={required} {...props} />
+    <BaseField.Control
+      className={cn(className, slots.control())}
+      required={required}
+      {...props}
+    />
   );
 };
 
@@ -46,7 +59,12 @@ export interface FieldDescriptionProps extends BaseField.Description.Props {}
 export const FieldDescription = ({ className, ...props }: FieldDescriptionProps) => {
   const { slots } = useField();
 
-  return <BaseField.Description className={cn(className, slots.description())} {...props} />;
+  return (
+    <BaseField.Description
+      className={cn(className, slots.description())}
+      {...props}
+    />
+  );
 };
 
 // Error
@@ -54,7 +72,12 @@ export interface FieldErrorProps extends BaseField.Error.Props {}
 export const FieldError = ({ className, ...props }: FieldErrorProps) => {
   const { slots } = useField();
 
-  return <BaseField.Error className={cn(className, slots.error())} {...props} />;
+  return (
+    <BaseField.Error
+      className={cn(className, slots.error())}
+      {...props}
+    />
+  );
 };
 
 // Group
@@ -63,5 +86,10 @@ export interface FieldGroupProps extends React.ComponentProps<"div"> {}
 export const FieldGroup = ({ className, ...props }: FieldGroupProps) => {
   const { slots } = useField();
 
-  return <div className={cn(className, slots.group())} {...props} />;
+  return (
+    <div
+      className={cn(className, slots.group())}
+      {...props}
+    />
+  );
 };

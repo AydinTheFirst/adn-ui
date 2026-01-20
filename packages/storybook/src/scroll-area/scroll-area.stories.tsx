@@ -16,9 +16,12 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {},
   render: (args) => (
-    <div className="flex h-screen items-center justify-center">
-      <ScrollArea className="h-48 w-64 border" {...args}>
-        <ScrollArea.Viewport className="p-4">
+    <div className='flex h-screen items-center justify-center'>
+      <ScrollArea
+        className='h-48 w-64 border'
+        {...args}
+      >
+        <ScrollArea.Viewport className='p-4'>
           <ScrollArea.Content>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut laoreet

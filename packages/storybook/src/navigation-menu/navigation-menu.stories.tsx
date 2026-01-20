@@ -13,18 +13,21 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {},
   render: (args) => (
-    <div className="flex justify-center">
+    <div className='flex justify-center'>
       <NavigationMenu {...args}>
         <NavigationMenu.List>
           <NavigationMenu.Item>
             <NavigationMenu.Trigger>Overview</NavigationMenu.Trigger>
             <NavigationMenu.Content>
-              <ul className="grid grid-cols-2 gap-4">
+              <ul className='grid grid-cols-2 gap-4'>
                 {overviewLinks.map((link) => (
                   <li key={link.href}>
-                    <a className="link flex flex-col items-start" href={link.href}>
-                      <h4 className="mb-1 font-medium">{link.title}</h4>
-                      <p className="text-muted-foreground text-sm">{link.description}</p>
+                    <a
+                      className='link flex flex-col items-start'
+                      href={link.href}
+                    >
+                      <h4 className='mb-1 font-medium'>{link.title}</h4>
+                      <p className='text-muted-foreground text-sm'>{link.description}</p>
                     </a>
                   </li>
                 ))}
@@ -35,12 +38,15 @@ export const Default: Story = {
           <NavigationMenu.Item>
             <NavigationMenu.Trigger>Handbook</NavigationMenu.Trigger>
             <NavigationMenu.Content>
-              <ul className="flex flex-col gap-4">
+              <ul className='flex flex-col gap-4'>
                 {handbookLinks.map((link) => (
                   <li key={link.href}>
-                    <a className="link flex flex-col items-start gap-2" href={link.href}>
-                      <h4 className="mb-1 font-medium">{link.title}</h4>
-                      <p className="text-muted-foreground text-sm">{link.description}</p>
+                    <a
+                      className='link flex flex-col items-start gap-2'
+                      href={link.href}
+                    >
+                      <h4 className='mb-1 font-medium'>{link.title}</h4>
+                      <p className='text-muted-foreground text-sm'>{link.description}</p>
                     </a>
                   </li>
                 ))}
@@ -49,7 +55,10 @@ export const Default: Story = {
           </NavigationMenu.Item>
 
           <NavigationMenu.Item>
-            <a className="link" href=" #">
+            <a
+              className='link'
+              href=' #'
+            >
               Github
             </a>
           </NavigationMenu.Item>

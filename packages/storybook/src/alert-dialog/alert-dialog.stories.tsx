@@ -24,7 +24,7 @@ export const Default: Story = {
             <AlertDialog.Description>
               This is an example of an alert dialog description.
             </AlertDialog.Description>
-            <div className="my-4">
+            <div className='my-4'>
               <p>This is some additional content inside the alert dialog popup.</p>
             </div>
             <AlertDialog.Close />

@@ -9,5 +9,10 @@ export interface CheckboxGroupProps extends CheckboxGroupVariants, BaseCheckboxG
 
 export const CheckboxGroup = ({ className, ...props }: CheckboxGroupProps) => {
   const styles = checkboxGroupVariants();
-  return <BaseCheckboxGroup className={cn(className, styles)} {...props} />;
+  return (
+    <BaseCheckboxGroup
+      className={cn(className, styles)}
+      {...props}
+    />
+  );
 };

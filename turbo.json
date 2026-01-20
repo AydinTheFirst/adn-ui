@@ -4,12 +4,6 @@
     "build": {
       "dependsOn": ["^build"]
     },
-    "lint": {
-      "cache": false
-    },
-    "format": {
-      "cache": false
-    },
     "dev": {
       "cache": false,
       "dependsOn": ["^build"],
@@ -20,8 +14,8 @@
       "dependsOn": ["^start"],
       "persistent": true
     },
-    "type-check": {
-      "dependsOn": ["^type-check"]
-    }
+    "//#lint": {},
+    "//#format": {},
+    "//#type-check": {}
   }
 }

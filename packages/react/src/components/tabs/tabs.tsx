@@ -52,7 +52,10 @@ export const TabsRoot = ({ className, ...props }: TabsProps) => {
 
   return (
     <TabsContext.Provider value={{ listRef, setListRef, slots }}>
-      <BaseTabs.Root className={cn(className, slots.root())} {...props} />
+      <BaseTabs.Root
+        className={cn(className, slots.root())}
+        {...props}
+      />
     </TabsContext.Provider>
   );
 };
@@ -62,7 +65,13 @@ export interface TabsListProps extends BaseTabs.List.Props {}
 
 export const TabsList = ({ className, ...props }: TabsListProps) => {
   const { slots, setListRef } = useTabs();
-  return <BaseTabs.List className={cn(slots.list(), className)} ref={setListRef} {...props} />;
+  return (
+    <BaseTabs.List
+      className={cn(slots.list(), className)}
+      ref={setListRef}
+      {...props}
+    />
+  );
 };
 
 // Tab
@@ -70,7 +79,12 @@ export interface TabsTabProps extends BaseTabs.Tab.Props {}
 
 export const TabsTab = ({ className, ...props }: TabsTabProps) => {
   const { slots } = useTabs();
-  return <BaseTabs.Tab className={cn(slots.tab(), className)} {...props} />;
+  return (
+    <BaseTabs.Tab
+      className={cn(slots.tab(), className)}
+      {...props}
+    />
+  );
 };
 
 // Indicator
@@ -78,7 +92,12 @@ export interface TabsIndicatorProps extends BaseTabs.Indicator.Props {}
 
 export const TabsIndicator = ({ className, ...props }: TabsIndicatorProps) => {
   const { slots } = useTabs();
-  return <BaseTabs.Indicator className={cn(slots.indicator(), className)} {...props} />;
+  return (
+    <BaseTabs.Indicator
+      className={cn(slots.indicator(), className)}
+      {...props}
+    />
+  );
 };
 
 // Panel
@@ -86,5 +105,10 @@ export interface TabsPanelProps extends BaseTabs.Panel.Props {}
 
 export const TabsPanel = ({ className, ...props }: TabsPanelProps) => {
   const { slots } = useTabs();
-  return <BaseTabs.Panel className={cn(slots.panel(), className)} {...props} />;
+  return (
+    <BaseTabs.Panel
+      className={cn(slots.panel(), className)}
+      {...props}
+    />
+  );
 };

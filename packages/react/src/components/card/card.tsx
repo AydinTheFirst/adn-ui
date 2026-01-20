@@ -16,7 +16,10 @@ export const CardRoot = ({ className, variant, ...props }: CardRootProps) => {
 
   return (
     <CardContext.Provider value={{ slots }}>
-      <div className={cn(className, slots.root())} {...props} />
+      <div
+        className={cn(className, slots.root())}
+        {...props}
+      />
     </CardContext.Provider>
   );
 };
@@ -26,7 +29,12 @@ export interface CardHeaderProps extends React.ComponentProps<"div"> {}
 export const CardHeader = ({ className, ...props }: CardHeaderProps) => {
   const { slots } = useCard();
 
-  return <div className={cn(className, slots.header())} {...props} />;
+  return (
+    <div
+      className={cn(className, slots.header())}
+      {...props}
+    />
+  );
 };
 
 export interface CardContentProps extends React.ComponentProps<"div"> {}
@@ -34,7 +42,12 @@ export interface CardContentProps extends React.ComponentProps<"div"> {}
 export const CardContent = ({ className, ...props }: CardContentProps) => {
   const { slots } = useCard();
 
-  return <div className={cn(className, slots.content())} {...props} />;
+  return (
+    <div
+      className={cn(className, slots.content())}
+      {...props}
+    />
+  );
 };
 
 export interface CardFooterProps extends React.ComponentProps<"div"> {}
@@ -45,7 +58,10 @@ export const CardTitle = ({ className, children, ...props }: CardTitle) => {
   const { slots } = useCard();
 
   return (
-    <h2 className={cn(className, slots.title())} {...props}>
+    <h2
+      className={cn(className, slots.title())}
+      {...props}
+    >
       {children}
     </h2>
   );
@@ -56,5 +72,10 @@ export interface CardDescriptionProps extends React.ComponentProps<"p"> {}
 export const CardDescription = ({ className, ...props }: CardDescriptionProps) => {
   const { slots } = useCard();
 
-  return <p className={cn(className, slots.description())} {...props} />;
+  return (
+    <p
+      className={cn(className, slots.description())}
+      {...props}
+    />
+  );
 };

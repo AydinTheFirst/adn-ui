@@ -18,7 +18,10 @@ export const NavigationMenuRoot = ({ className, ...props }: NavigationMenuProps)
 
   return (
     <NavigationMenuContext.Provider value={{ slots }}>
-      <BaseNavigationMenu.Root className={cn(className, slots.root())} {...props} />
+      <BaseNavigationMenu.Root
+        className={cn(className, slots.root())}
+        {...props}
+      />
     </NavigationMenuContext.Provider>
   );
 };
@@ -28,7 +31,12 @@ export interface NavigationMenuListProps extends BaseNavigationMenu.List.Props {
 
 export const NavigationMenuList = ({ className, ...props }: NavigationMenuListProps) => {
   const { slots } = useNavigationMenu();
-  return <BaseNavigationMenu.List className={cn(slots.list(), className)} {...props} />;
+  return (
+    <BaseNavigationMenu.List
+      className={cn(slots.list(), className)}
+      {...props}
+    />
+  );
 };
 
 // Item
@@ -36,7 +44,12 @@ export interface NavigationMenuItemProps extends BaseNavigationMenu.Item.Props {
 
 export const NavigationMenuItem = ({ className, ...props }: NavigationMenuItemProps) => {
   const { slots } = useNavigationMenu();
-  return <BaseNavigationMenu.Item className={cn(slots.item(), className)} {...props} />;
+  return (
+    <BaseNavigationMenu.Item
+      className={cn(slots.item(), className)}
+      {...props}
+    />
+  );
 };
 
 // Trigger
@@ -49,7 +62,10 @@ export const NavigationMenuTrigger = ({
 }: NavigationMenuTriggerProps) => {
   const { slots } = useNavigationMenu();
   return (
-    <BaseNavigationMenu.Trigger className={cn(slots.trigger(), className)} {...props}>
+    <BaseNavigationMenu.Trigger
+      className={cn(slots.trigger(), className)}
+      {...props}
+    >
       {children}
     </BaseNavigationMenu.Trigger>
   );
@@ -61,7 +77,10 @@ export interface NavigationMenuIconProps extends BaseNavigationMenu.Icon.Props {
 export const NavigationMenuIcon = ({ className, children, ...props }: NavigationMenuIconProps) => {
   const { slots } = useNavigationMenu();
   return (
-    <BaseNavigationMenu.Icon className={cn(slots.icon(), className)} {...props}>
+    <BaseNavigationMenu.Icon
+      className={cn(slots.icon(), className)}
+      {...props}
+    >
       {children || <ChevronDown />}
     </BaseNavigationMenu.Icon>
   );
@@ -72,7 +91,12 @@ export interface NavigationMenuContentProps extends BaseNavigationMenu.Content.P
 
 export const NavigationMenuContent = ({ className, ...props }: NavigationMenuContentProps) => {
   const { slots } = useNavigationMenu();
-  return <BaseNavigationMenu.Content className={cn(slots.content(), className)} {...props} />;
+  return (
+    <BaseNavigationMenu.Content
+      className={cn(slots.content(), className)}
+      {...props}
+    />
+  );
 };
 
 // Link
@@ -80,7 +104,12 @@ export interface NavigationMenuLinkProps extends BaseNavigationMenu.Link.Props {
 
 export const NavigationMenuLink = ({ className, ...props }: NavigationMenuLinkProps) => {
   const { slots } = useNavigationMenu();
-  return <BaseNavigationMenu.Link className={cn(slots.link(), className)} {...props} />;
+  return (
+    <BaseNavigationMenu.Link
+      className={cn(slots.link(), className)}
+      {...props}
+    />
+  );
 };
 
 // Portal
@@ -95,7 +124,12 @@ export interface NavigationMenuBackdropProps extends BaseNavigationMenu.Backdrop
 
 export const NavigationMenuBackdrop = ({ className, ...props }: NavigationMenuBackdropProps) => {
   const { slots } = useNavigationMenu();
-  return <BaseNavigationMenu.Backdrop className={cn(slots.backdrop(), className)} {...props} />;
+  return (
+    <BaseNavigationMenu.Backdrop
+      className={cn(slots.backdrop(), className)}
+      {...props}
+    />
+  );
 };
 
 // Positioner
@@ -106,7 +140,12 @@ export const NavigationMenuPositioner = ({
   ...props
 }: NavigationMenuPositionerProps) => {
   const { slots } = useNavigationMenu();
-  return <BaseNavigationMenu.Positioner className={cn(slots.positioner(), className)} {...props} />;
+  return (
+    <BaseNavigationMenu.Positioner
+      className={cn(slots.positioner(), className)}
+      {...props}
+    />
+  );
 };
 
 // Popup
@@ -114,7 +153,12 @@ export interface NavigationMenuPopupProps extends BaseNavigationMenu.Popup.Props
 
 export const NavigationMenuPopup = ({ className, ...props }: NavigationMenuPopupProps) => {
   const { slots } = useNavigationMenu();
-  return <BaseNavigationMenu.Popup className={cn(slots.popup(), className)} {...props} />;
+  return (
+    <BaseNavigationMenu.Popup
+      className={cn(slots.popup(), className)}
+      {...props}
+    />
+  );
 };
 
 // Arrow
@@ -122,7 +166,12 @@ export interface NavigationMenuArrowProps extends BaseNavigationMenu.Arrow.Props
 
 export const NavigationMenuArrow = ({ className, ...props }: NavigationMenuArrowProps) => {
   const { slots } = useNavigationMenu();
-  return <BaseNavigationMenu.Arrow className={cn(slots.arrow(), className)} {...props} />;
+  return (
+    <BaseNavigationMenu.Arrow
+      className={cn(slots.arrow(), className)}
+      {...props}
+    />
+  );
 };
 
 // Viewport
@@ -130,5 +179,10 @@ export interface NavigationMenuViewportProps extends BaseNavigationMenu.Viewport
 
 export const NavigationMenuViewport = ({ className, ...props }: NavigationMenuViewportProps) => {
   const { slots } = useNavigationMenu();
-  return <BaseNavigationMenu.Viewport className={cn(slots.viewport(), className)} {...props} />;
+  return (
+    <BaseNavigationMenu.Viewport
+      className={cn(slots.viewport(), className)}
+      {...props}
+    />
+  );
 };

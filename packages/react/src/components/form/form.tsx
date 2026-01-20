@@ -9,5 +9,10 @@ export interface FormProps extends FormVariants, BaseForm.Props {}
 
 export const Form = ({ className, ...props }: FormProps) => {
   const styles = formVariants();
-  return <BaseForm className={cn(className, styles)} {...props} />;
+  return (
+    <BaseForm
+      className={cn(className, styles)}
+      {...props}
+    />
+  );
 };

@@ -25,15 +25,24 @@ export const Default: Story = {
             <Dialog.Title>Dialog Title</Dialog.Title>
             <Dialog.Description>This is the description of the dialog.</Dialog.Description>
 
-            <Form className="my-4" onSubmit={(e) => e.preventDefault()}>
+            <Form
+              className='my-4'
+              onSubmit={(e) => e.preventDefault()}
+            >
               <Field.Root required>
                 <Field.Label>Email</Field.Label>
-                <Field.Control placeholder="Enter your email" type="email" />
+                <Field.Control
+                  placeholder='Enter your email'
+                  type='email'
+                />
                 <Field.Description>Please enter a valid email address.</Field.Description>
                 <Field.Error />
               </Field.Root>
 
-              <Button className="w-full" type="submit">
+              <Button
+                className='w-full'
+                type='submit'
+              >
                 Submit
               </Button>
             </Form>

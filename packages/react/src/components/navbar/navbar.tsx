@@ -38,7 +38,11 @@ export const NavbarRoot = ({ className, isOpen, onOpenChange, ...props }: Navbar
         slots,
       }}
     >
-      <header data-open={open} className={cn(slots.root(), className)} {...props} />
+      <header
+        data-open={open}
+        className={cn(slots.root(), className)}
+        {...props}
+      />
     </NavbarContext.Provider>
   );
 };
@@ -48,7 +52,12 @@ export interface NavbarContainerProps extends React.ComponentProps<"nav"> {}
 export const NavbarContainer = ({ className, ...props }: NavbarContainerProps) => {
   const { slots } = useNavbar();
 
-  return <nav className={cn(slots.container(), className)} {...props} />;
+  return (
+    <nav
+      className={cn(slots.container(), className)}
+      {...props}
+    />
+  );
 };
 
 export interface NavbarContentProps extends React.ComponentProps<"ul"> {}
@@ -56,14 +65,24 @@ export interface NavbarContentProps extends React.ComponentProps<"ul"> {}
 export const NavbarContent = ({ className, ...props }: NavbarContentProps) => {
   const { slots } = useNavbar();
 
-  return <ul className={cn(slots.content(), className)} {...props} />;
+  return (
+    <ul
+      className={cn(slots.content(), className)}
+      {...props}
+    />
+  );
 };
 
 export interface NavbarItemProps extends React.ComponentProps<"li"> {}
 
 export const NavbarItem = ({ className, ...props }: NavbarItemProps) => {
   const { slots } = useNavbar();
-  return <li className={cn(slots.listItem(), className)} {...props} />;
+  return (
+    <li
+      className={cn(slots.listItem(), className)}
+      {...props}
+    />
+  );
 };
 
 export interface NavbarToggleProps extends React.ComponentProps<"button"> {}
@@ -79,7 +98,7 @@ export const NavbarToggle = ({ className, ...props }: NavbarToggleProps) => {
       onClick={() => onOpenChange(!isOpen)}
       {...props}
     >
-      <Icon className="size-5" />
+      <Icon className='size-5' />
     </button>
   );
 };
@@ -90,7 +109,12 @@ export interface NavbarMenuProps extends React.ComponentProps<"ul"> {}
 export const NavbarMenu = ({ className, ...props }: NavbarMenuProps) => {
   const { slots } = useNavbar();
 
-  return <ul className={cn(slots.menu(), className)} {...props} />;
+  return (
+    <ul
+      className={cn(slots.menu(), className)}
+      {...props}
+    />
+  );
 };
 
 export interface NavbarMenuItemProps extends React.ComponentProps<"li"> {}
@@ -98,5 +122,10 @@ export interface NavbarMenuItemProps extends React.ComponentProps<"li"> {}
 export const NavbarMenuItem = ({ className, ...props }: NavbarMenuItemProps) => {
   const { slots } = useNavbar();
 
-  return <li className={cn(slots.menuItem(), className)} {...props} />;
+  return (
+    <li
+      className={cn(slots.menuItem(), className)}
+      {...props}
+    />
+  );
 };

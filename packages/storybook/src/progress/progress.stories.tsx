@@ -36,7 +36,10 @@ export const Default: Story = {
     }, []);
 
     return (
-      <Progress {...args} value={value}>
+      <Progress
+        {...args}
+        value={value}
+      >
         <Progress.Label>Loading...</Progress.Label>
         <Progress.Value />
         <Progress.Track>

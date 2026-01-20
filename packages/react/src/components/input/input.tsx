@@ -10,5 +10,10 @@ export interface InputProps extends InputVariants, BaseInput.Props {}
 
 export const Input = ({ className, ...props }: InputProps) => {
   const styles = inputVariants();
-  return <BaseInput className={cn(className, styles)} {...props} />;
+  return (
+    <BaseInput
+      className={cn(className, styles)}
+      {...props}
+    />
+  );
 };

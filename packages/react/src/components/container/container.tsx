@@ -9,5 +9,10 @@ export interface ContainerProps extends ContainerVariants, React.ComponentProps<
 
 export const Container = ({ className, ...props }: ContainerProps) => {
   const styles = containerVariants();
-  return <div className={cn(className, styles)} {...props} />;
+  return (
+    <div
+      className={cn(className, styles)}
+      {...props}
+    />
+  );
 };

@@ -30,7 +30,10 @@ export const Default: Story = {
   },
 
   render: (args) => (
-    <Meter {...args} value={24}>
+    <Meter
+      {...args}
+      value={24}
+    >
       <Meter.Label>Progress</Meter.Label>
       <Meter.Value />
       <Meter.Track>

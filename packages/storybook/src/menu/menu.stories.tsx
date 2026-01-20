@@ -13,7 +13,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {},
   render: (args) => (
-    <div className="flex h-screen items-center justify-center">
+    <div className='flex h-screen items-center justify-center'>
       <Menu {...args}>
         <Menu.Trigger>
           <Button>Open Menu</Button>

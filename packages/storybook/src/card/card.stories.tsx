@@ -32,10 +32,10 @@ export const Default: Story = {
           <Field.Root required>
             <Field.Label>Username</Field.Label>
             <Field.Group>
-              <Button variant="field">
+              <Button variant='field'>
                 <LucideUser />
               </Button>
-              <Field.Control placeholder="Enter your username" />
+              <Field.Control placeholder='Enter your username' />
             </Field.Group>
             <Field.Description>This is a description text.</Field.Description>
             <Field.Error />
@@ -43,18 +43,24 @@ export const Default: Story = {
 
           <Field.Root required>
             <Field.Label>Password</Field.Label>
-            <Field.Control placeholder="Enter your password" type="password" />
+            <Field.Control
+              placeholder='Enter your password'
+              type='password'
+            />
             <Field.Description>This is a description text.</Field.Description>
             <Field.Error />
           </Field.Root>
 
-          <Button className="w-full" type="submit">
+          <Button
+            className='w-full'
+            type='submit'
+          >
             Submit
           </Button>
         </Form>
       </Card.Content>
-      <Card.Content className="flex justify-end">
-        <Button variant="danger">Cancel</Button>
+      <Card.Content className='flex justify-end'>
+        <Button variant='danger'>Cancel</Button>
       </Card.Content>
     </Card>
   ),

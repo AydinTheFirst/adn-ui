@@ -26,7 +26,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   render: (args) => (
-    <Container className="center">
+    <Container className='center'>
       <Spinner {...args} />
     </Container>
   ),

@@ -13,11 +13,14 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {},
   render: (args) => (
-    <div className="flex h-screen items-center justify-center">
-      <Autocomplete {...args} items={fruits}>
-        <Label className="flex-col items-start">
+    <div className='flex h-screen items-center justify-center'>
+      <Autocomplete
+        {...args}
+        items={fruits}
+      >
+        <Label className='flex-col items-start'>
           Select a fruit
-          <Autocomplete.Input placeholder="e.g Apple" />
+          <Autocomplete.Input placeholder='e.g Apple' />
         </Label>
         <Autocomplete.Portal>
           <Autocomplete.Positioner sideOffset={4}>
@@ -26,7 +29,10 @@ export const Default: Story = {
               <Autocomplete.Empty>Nothing found</Autocomplete.Empty>
               <Autocomplete.List>
                 {(fruit: Fruit) => (
-                  <Autocomplete.Item key={fruit.id} value={fruit.value}>
+                  <Autocomplete.Item
+                    key={fruit.id}
+                    value={fruit.value}
+                  >
                     {fruit.value}
                   </Autocomplete.Item>
                 )}

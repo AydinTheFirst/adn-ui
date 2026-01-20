@@ -9,5 +9,10 @@ export interface ButtonGroupProps extends ButtonGroupVariants, React.ComponentPr
 
 export const ButtonGroup = ({ className, ...props }: ButtonGroupProps) => {
   const styles = buttonGroupVariants();
-  return <div className={cn(className, styles)} {...props} />;
+  return (
+    <div
+      className={cn(className, styles)}
+      {...props}
+    />
+  );
 };

@@ -16,7 +16,10 @@ export const CheckboxRoot = ({ className, ...props }: CheckboxProps) => {
   const slots = useMemo(() => checkboxVariants({}), []);
   return (
     <CheckboxContext value={{ slots }}>
-      <BaseCheckbox.Root className={cn(className, slots.root())} {...props} />
+      <BaseCheckbox.Root
+        className={cn(className, slots.root())}
+        {...props}
+      />
     </CheckboxContext>
   );
 };
@@ -27,7 +30,10 @@ export const CheckboxIndicator = ({ className, children, ...props }: CheckboxInd
   const { slots } = useCheckbox();
 
   return (
-    <BaseCheckbox.Indicator className={cn(className, slots.indicator())} {...props}>
+    <BaseCheckbox.Indicator
+      className={cn(className, slots.indicator())}
+      {...props}
+    >
       {children ?? <LucideCheck />}
     </BaseCheckbox.Indicator>
   );

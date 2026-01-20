@@ -15,7 +15,10 @@ export const NumberFieldRoot = ({ className, ...props }: NumberFieldProps) => {
   const slots = useMemo(() => numberFieldVariants(), []);
   return (
     <NumberFieldContext value={{ slots }}>
-      <BaseNumberField.Root className={cn(className, slots.root())} {...props} />
+      <BaseNumberField.Root
+        className={cn(className, slots.root())}
+        {...props}
+      />
     </NumberFieldContext>
   );
 };
@@ -24,13 +27,23 @@ export const NumberFieldRoot = ({ className, ...props }: NumberFieldProps) => {
 export interface NumberFieldScrubAreaProps extends BaseNumberField.ScrubArea.Props {}
 export const NumberFieldScrubArea = ({ className, ...props }: NumberFieldScrubAreaProps) => {
   const { slots } = useNumberField();
-  return <BaseNumberField.ScrubArea className={cn(slots.scrubArea(), className)} {...props} />;
+  return (
+    <BaseNumberField.ScrubArea
+      className={cn(slots.scrubArea(), className)}
+      {...props}
+    />
+  );
 };
 
 export interface NumberFieldGroupProps extends BaseNumberField.Group.Props {}
 export const NumberFieldGroup = ({ className, ...props }: NumberFieldGroupProps) => {
   const { slots } = useNumberField();
-  return <BaseNumberField.Group className={cn(slots.group(), className)} {...props} />;
+  return (
+    <BaseNumberField.Group
+      className={cn(slots.group(), className)}
+      {...props}
+    />
+  );
 };
 
 // ScrubAreaCursor
@@ -42,7 +55,10 @@ export const NumberFieldScrubAreaCursor = ({
 }: NumberFieldScrubAreaCursorProps) => {
   const { slots } = useNumberField();
   return (
-    <BaseNumberField.ScrubAreaCursor className={cn(slots.scrubAreaCursor(), className)} {...props}>
+    <BaseNumberField.ScrubAreaCursor
+      className={cn(slots.scrubAreaCursor(), className)}
+      {...props}
+    >
       {children ?? <LucideChevronsLeftRight />}
     </BaseNumberField.ScrubAreaCursor>
   );
@@ -57,7 +73,10 @@ export const NumberFieldDecrement = ({
 }: NumberFieldDecrementProps) => {
   const { slots } = useNumberField();
   return (
-    <BaseNumberField.Decrement className={cn(slots.decrement(), className)} {...props}>
+    <BaseNumberField.Decrement
+      className={cn(slots.decrement(), className)}
+      {...props}
+    >
       {children ?? <LucideMinus />}
     </BaseNumberField.Decrement>
   );
@@ -67,7 +86,12 @@ export const NumberFieldDecrement = ({
 export interface NumberFieldInputProps extends BaseNumberField.Input.Props {}
 export const NumberFieldInput = ({ className, ...props }: NumberFieldInputProps) => {
   const { slots } = useNumberField();
-  return <BaseNumberField.Input className={cn(slots.input(), className)} {...props} />;
+  return (
+    <BaseNumberField.Input
+      className={cn(slots.input(), className)}
+      {...props}
+    />
+  );
 };
 
 // Increment
@@ -79,7 +103,10 @@ export const NumberFieldIncrement = ({
 }: NumberFieldIncrementProps) => {
   const { slots } = useNumberField();
   return (
-    <BaseNumberField.Increment className={cn(slots.increment(), className)} {...props}>
+    <BaseNumberField.Increment
+      className={cn(slots.increment(), className)}
+      {...props}
+    >
       {children ?? <LucidePlus />}
     </BaseNumberField.Increment>
   );

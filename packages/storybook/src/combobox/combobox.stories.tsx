@@ -13,11 +13,14 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {},
   render: (args) => (
-    <div className="flex h-screen items-center justify-center">
-      <Combobox.Root {...args} items={fruits}>
-        <Label className="flex-col items-start">
+    <div className='flex h-screen items-center justify-center'>
+      <Combobox.Root
+        {...args}
+        items={fruits}
+      >
+        <Label className='flex-col items-start'>
           Select a fruit
-          <Combobox.Input placeholder="e.g Apple" />
+          <Combobox.Input placeholder='e.g Apple' />
         </Label>
 
         <Combobox.Portal>
@@ -26,7 +29,10 @@ export const Default: Story = {
               <Combobox.Empty>Nothing found</Combobox.Empty>
               <Combobox.List>
                 {(fruit: string) => (
-                  <Combobox.Item key={fruit} value={fruit}>
+                  <Combobox.Item
+                    key={fruit}
+                    value={fruit}
+                  >
                     <Combobox.ItemIndicator />
                     {fruit}
                   </Combobox.Item>

@@ -15,7 +15,7 @@ export const Vertical: Story = {
     orientation: "vertical",
   },
   render: (args) => (
-    <ul className="flex h-24 items-center gap-5">
+    <ul className='flex h-24 items-center gap-5'>
       <li>Item 1</li>
       <Separator {...args} />
       <li>Item 2</li>
@@ -28,7 +28,7 @@ export const Horizontal: Story = {
     orientation: "horizontal",
   },
   render: (args) => (
-    <ul className="flex h-24 items-center gap-5">
+    <ul className='flex h-24 items-center gap-5'>
       <li>Item 1</li>
       <Separator {...args} />
       <li>Item 2</li>

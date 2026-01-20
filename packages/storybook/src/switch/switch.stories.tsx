@@ -29,7 +29,10 @@ export const Default: Story = {
 
 export const Disabled: Story = {
   render: (args) => (
-    <Switch.Root {...args} disabled>
+    <Switch.Root
+      {...args}
+      disabled
+    >
       <Switch.Thumb />
     </Switch.Root>
   ),

@@ -9,5 +9,10 @@ export interface SeparatorProps extends SeparatorVariants, BaseSeparator.Props {
 
 export const Separator = ({ className, orientation, ...props }: SeparatorProps) => {
   const styles = separatorVariants({ orientation });
-  return <BaseSeparator className={cn(className, styles)} {...props} />;
+  return (
+    <BaseSeparator
+      className={cn(className, styles)}
+      {...props}
+    />
+  );
 };

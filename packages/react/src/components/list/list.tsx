@@ -14,7 +14,10 @@ export const ListRoot = ({ className, ...props }: ListProps) => {
 
   return (
     <ListContext.Provider value={{ slots }}>
-      <ul className={cn(className, slots.root())} {...props} />
+      <ul
+        className={cn(className, slots.root())}
+        {...props}
+      />
     </ListContext.Provider>
   );
 };
@@ -24,5 +27,10 @@ export interface ListItemProps extends React.ComponentProps<"li"> {}
 export const ListItem = ({ className, ...props }: ListItemProps) => {
   const { slots } = useList();
 
-  return <li className={cn(className, slots.item())} {...props} />;
+  return (
+    <li
+      className={cn(className, slots.item())}
+      {...props}
+    />
+  );
 };

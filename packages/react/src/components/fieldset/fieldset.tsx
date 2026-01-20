@@ -16,7 +16,10 @@ export const FieldsetRoot = ({ className, ...props }: FieldsetProps) => {
 
   return (
     <FieldsetContext value={{ slots }}>
-      <BaseFieldset.Root className={cn(className, slots.root())} {...props} />
+      <BaseFieldset.Root
+        className={cn(className, slots.root())}
+        {...props}
+      />
     </FieldsetContext>
   );
 };
@@ -26,7 +29,12 @@ export interface FieldsetLegendProps extends BaseFieldset.Legend.Props {}
 
 export const FieldsetLegend = ({ className, ...props }: FieldsetLegendProps) => {
   const { slots } = useFieldset();
-  return <BaseFieldset.Legend className={cn(slots.legend(), className)} {...props} />;
+  return (
+    <BaseFieldset.Legend
+      className={cn(slots.legend(), className)}
+      {...props}
+    />
+  );
 };
 
 // Exports

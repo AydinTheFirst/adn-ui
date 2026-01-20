@@ -30,7 +30,11 @@ export const SidebarRoot = ({ className, isOpen, onOpenChange, ...props }: Sideb
         slots,
       }}
     >
-      <div className={slots.root()} data-open={isOpenState} {...props} />
+      <div
+        className={slots.root()}
+        data-open={isOpenState}
+        {...props}
+      />
     </SidebarContext>
   );
 };
@@ -40,7 +44,12 @@ export interface SidebarPanelProps extends React.ComponentProps<"aside"> {}
 export const SidebarPanel = ({ className, ...props }: SidebarPanelProps) => {
   const { slots } = useSidebar();
 
-  return <aside className={cn(slots.panel(), className)} {...props} />;
+  return (
+    <aside
+      className={cn(slots.panel(), className)}
+      {...props}
+    />
+  );
 };
 
 // Header
@@ -48,7 +57,12 @@ export interface SidebarHeaderProps extends React.ComponentProps<"header"> {}
 export const SidebarHeader = ({ className, ...props }: SidebarHeaderProps) => {
   const { slots } = useSidebar();
 
-  return <header className={cn(slots.header(), className)} {...props} />;
+  return (
+    <header
+      className={cn(slots.header(), className)}
+      {...props}
+    />
+  );
 };
 
 // Content
@@ -56,7 +70,12 @@ export interface SidebarContentProps extends React.ComponentProps<"div"> {}
 export const SidebarContent = ({ className, ...props }: SidebarContentProps) => {
   const { slots } = useSidebar();
 
-  return <div className={cn(slots.content(), className)} {...props} />;
+  return (
+    <div
+      className={cn(slots.content(), className)}
+      {...props}
+    />
+  );
 };
 
 // Footer
@@ -64,7 +83,12 @@ export interface SidebarFooterProps extends React.ComponentProps<"footer"> {}
 export const SidebarFooter = ({ className, ...props }: SidebarFooterProps) => {
   const { slots } = useSidebar();
 
-  return <footer className={cn(slots.footer(), className)} {...props} />;
+  return (
+    <footer
+      className={cn(slots.footer(), className)}
+      {...props}
+    />
+  );
 };
 
 // Trigger
@@ -89,7 +113,12 @@ export interface SidebarOutletProps extends React.ComponentProps<"div"> {}
 export const SidebarOutlet = ({ className, ...props }: SidebarOutletProps) => {
   const { slots } = useSidebar();
 
-  return <div className={cn(slots.outlet(), className)} {...props} />;
+  return (
+    <div
+      className={cn(slots.outlet(), className)}
+      {...props}
+    />
+  );
 };
 
 // Menu
@@ -97,7 +126,12 @@ export interface SidebarMenuProps extends React.ComponentProps<"nav"> {}
 export const SidebarMenu = ({ className, ...props }: SidebarMenuProps) => {
   const { slots } = useSidebar();
 
-  return <nav className={cn(slots.menu(), className)} {...props} />;
+  return (
+    <nav
+      className={cn(slots.menu(), className)}
+      {...props}
+    />
+  );
 };
 
 // Menu Item
@@ -105,7 +139,12 @@ export interface SidebarMenuItemProps extends React.ComponentProps<"li"> {}
 export const SidebarMenuItem = ({ className, ...props }: SidebarMenuItemProps) => {
   const { slots } = useSidebar();
 
-  return <li className={cn(slots.menuItem(), className)} {...props} />;
+  return (
+    <li
+      className={cn(slots.menuItem(), className)}
+      {...props}
+    />
+  );
 };
 
 // Menu Label
@@ -113,5 +152,10 @@ export interface SidebarMenuLabelProps extends React.ComponentProps<"div"> {}
 export const SidebarMenuLabel = ({ className, ...props }: SidebarMenuLabelProps) => {
   const { slots } = useSidebar();
 
-  return <div className={cn(slots.menuLabel(), className)} {...props} />;
+  return (
+    <div
+      className={cn(slots.menuLabel(), className)}
+      {...props}
+    />
+  );
 };

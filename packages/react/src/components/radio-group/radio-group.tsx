@@ -12,5 +12,10 @@ export interface RadioGroupProps extends RadioGroupVariants, BaseRadioGroup.Prop
 export const RadioGroup = ({ className, ...props }: RadioGroupProps) => {
   const styles = useMemo(() => radioGroupVariants(), []);
 
-  return <BaseRadioGroup className={cn(className, styles)} {...props} />;
+  return (
+    <BaseRadioGroup
+      className={cn(className, styles)}
+      {...props}
+    />
+  );
 };
