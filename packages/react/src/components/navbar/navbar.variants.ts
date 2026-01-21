@@ -7,7 +7,6 @@ export const navbarVariants = tv({
     list: "navbar__list",
     listItem: "navbar__list-item",
     menu: "navbar__menu",
-    menuItem: "navbar__menu-item",
     root: "navbar",
     toggle: "navbar__toggle",
   },

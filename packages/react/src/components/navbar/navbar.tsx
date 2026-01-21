@@ -1,40 +1,25 @@
 "use client";
 
 import { LucideMenu, LucideX } from "lucide-react";
-import { useCallback, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { cn } from "tailwind-variants";
 
+import { Drawer } from "../drawer";
 import { NavbarContext } from "./navbar.context";
 import { type NavbarVariants, navbarVariants } from "./navbar.variants";
 import { useNavbar } from "./use-navbar";
+export interface NavbarProps extends NavbarVariants, React.ComponentProps<"header"> {}
 
-export interface NavbarProps extends NavbarVariants, React.ComponentProps<"header"> {
-  isOpen?: boolean;
-  onOpenChange?: (open: boolean) => void;
-}
+export const NavbarRoot = ({ className, ...props }: NavbarProps) => {
+  const slots = useMemo(() => navbarVariants({}), []);
 
-export const NavbarRoot = ({ className, isOpen, onOpenChange, ...props }: NavbarProps) => {
-  const slots = useMemo(() => navbarVariants(), []);
-
-  const [internalOpen, setInternalOpen] = useState(false);
-
-  const open = isOpen ?? internalOpen;
-
-  const handleOpenChange = useCallback(
-    (next: boolean) => {
-      if (isOpen === undefined) {
-        setInternalOpen(next);
-      }
-      onOpenChange?.(next);
-    },
-    [isOpen, onOpenChange],
-  );
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <NavbarContext.Provider
       value={{
-        isOpen: open,
-        onOpenChange: handleOpenChange,
+        isOpen,
+        setIsOpen,
         slots,
       }}
     >
@@ -88,14 +73,14 @@ export const NavbarItem = ({ className, ...props }: NavbarItemProps) => {
 export interface NavbarToggleProps extends React.ComponentProps<"button"> {}
 
 export const NavbarToggle = ({ className, ...props }: NavbarToggleProps) => {
-  const { slots, isOpen, onOpenChange } = useNavbar();
+  const { slots, isOpen, setIsOpen } = useNavbar();
 
   const Icon = isOpen ? LucideX : LucideMenu;
 
   return (
     <button
       className={cn(className, slots.toggle())}
-      onClick={() => onOpenChange(!isOpen)}
+      onClick={() => setIsOpen(!isOpen)}
       {...props}
     >
       <Icon className='size-5' />
@@ -104,28 +89,43 @@ export const NavbarToggle = ({ className, ...props }: NavbarToggleProps) => {
 };
 
 // Menu
-export interface NavbarMenuProps extends React.ComponentProps<"ul"> {}
+export interface NavbarMenuProps extends React.ComponentProps<typeof Drawer.Root> {}
 
-export const NavbarMenu = ({ className, ...props }: NavbarMenuProps) => {
-  const { slots } = useNavbar();
+export const NavbarMenu = ({ children, ...props }: NavbarMenuProps) => {
+  const { isOpen, setIsOpen } = useNavbar();
 
   return (
-    <ul
-      className={cn(slots.menu(), className)}
+    <Drawer.Root
+      open={isOpen}
+      onOpenChange={setIsOpen}
       {...props}
-    />
+    >
+      {children}
+    </Drawer.Root>
   );
 };
 
-export interface NavbarMenuItemProps extends React.ComponentProps<"li"> {}
+// Menu Content
+export interface NavbarMenuContentProps extends React.ComponentProps<typeof Drawer.Popup> {
+  backdrop?: boolean;
+  close?: boolean;
+}
 
-export const NavbarMenuItem = ({ className, ...props }: NavbarMenuItemProps) => {
+export const NavbarMenuContent = ({ className, children, ...props }: NavbarMenuContentProps) => {
   const { slots } = useNavbar();
 
   return (
-    <li
-      className={cn(slots.menuItem(), className)}
-      {...props}
-    />
+    <Drawer.Portal>
+      <Drawer.Backdrop />
+      <Drawer.Viewport>
+        <Drawer.Popup
+          className={cn(slots.menu(), className)}
+          {...props}
+        >
+          <Drawer.Close />
+          {children}
+        </Drawer.Popup>
+      </Drawer.Viewport>
+    </Drawer.Portal>
   );
 };

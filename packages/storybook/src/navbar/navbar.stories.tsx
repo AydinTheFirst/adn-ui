@@ -42,16 +42,52 @@ export const Default: Story = {
           </Button>
         </Navbar.Content>
       </Navbar.Container>
-      <Navbar.Menu>
-        <Navbar.MenuItem>
-          <Link href='#'>Home</Link>
-        </Navbar.MenuItem>
-        <Navbar.MenuItem>
-          <Link href='#'>About</Link>
-        </Navbar.MenuItem>
-        <Navbar.MenuItem>
-          <Link href='#'>Contact</Link>
-        </Navbar.MenuItem>
+      <Navbar.Menu position='bottom'>
+        <Navbar.MenuContent>
+          <div className='flex items-center justify-between px-3 py-2'>
+            <span className='text-lg font-semibold'>Menu</span>
+          </div>
+          <ul>
+            <li>
+              <Link
+                className='block w-full px-3 py-2'
+                href='#'
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                className='block w-full px-3 py-2'
+                href='#'
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                className='block w-full px-3 py-2'
+                href='#'
+              >
+                Contact
+              </Link>
+            </li>
+            <li className='flex items-center'>
+              <Button
+                className='w-full'
+                variant='secondary'
+              >
+                Log In
+              </Button>
+              <Button
+                className='ml-2 w-full'
+                variant='primary'
+              >
+                Sign Up
+              </Button>
+            </li>
+          </ul>
+        </Navbar.MenuContent>
       </Navbar.Menu>
     </Navbar>
   ),

@@ -12,32 +12,7 @@
   @apply flex items-center gap-4;
 }
 
-.navbar__menu {
-  @apply absolute top-full right-0 left-0;
-  @apply h-96 w-full overflow-hidden;
-
-  @apply flex flex-col md:hidden;
-
-  @apply bg-overlay/10 text-overlay-foreground shadow backdrop-blur-2xl;
-
-  @apply transition-[height] motion-reduce:transition-none;
-}
-
-[data-open="true"] .navbar__menu {
-  @apply h-0;
-}
-
-.navbar__menu-item {
-  @apply cursor-pointer;
-  @apply px-3 py-2;
-
-  @apply text-foreground hover-safe:bg-primary/10 hover-safe:text-primary;
-
-  @apply transition-[background-color,color] motion-reduce:transition-none;
-}
-
 .navbar__toggle {
-  @apply md:hidden;
   @apply cursor-pointer;
 
   svg {

@@ -3,8 +3,8 @@ import {
   NavbarContent,
   NavbarItem,
   NavbarMenu,
-  NavbarMenuItem,
   NavbarRoot,
+  NavbarMenuContent,
   NavbarToggle,
 } from "./navbar";
 
@@ -13,7 +13,7 @@ export const Navbar = Object.assign(NavbarRoot, {
   Content: NavbarContent,
   Item: NavbarItem,
   Menu: NavbarMenu,
-  MenuItem: NavbarMenuItem,
+  MenuContent: NavbarMenuContent,
   Root: NavbarRoot,
   Toggle: NavbarToggle,
 });
