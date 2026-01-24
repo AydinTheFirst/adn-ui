@@ -11,7 +11,8 @@ const files = fs.readdirSync(componentsDir);
 
 const imports = files
   .filter((file) => fs.statSync(path.join(componentsDir, file)).isDirectory())
-  .map((file) => `export * from "~/components/${file}";`);
+  .map((file) => `export * from "~/components/${file}";`)
+  .sort();
 
 fs.writeFileSync(path.resolve("src/components/index.ts"), imports.join("\n"));
 
