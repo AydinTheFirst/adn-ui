@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Autocomplete, Label } from "@adn-ui/react";
+import { Autocomplete } from "@adn-ui/react";
 
 const meta: Meta<typeof Autocomplete> = {
   component: Autocomplete,
@@ -18,10 +18,13 @@ export const Default: Story = {
         {...args}
         items={fruits}
       >
-        <Label className='flex-col items-start'>
+        <label
+          htmlFor='autocomplete'
+          className='flex-col items-start'
+        >
           Select a fruit
           <Autocomplete.Input placeholder='e.g Apple' />
-        </Label>
+        </label>
         <Autocomplete.Portal>
           <Autocomplete.Positioner sideOffset={4}>
             <Autocomplete.Popup>

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Combobox, Label } from "@adn-ui/react";
+import { Combobox } from "@adn-ui/react";
 
 const meta: Meta<typeof Combobox> = {
   component: Combobox,
@@ -18,10 +18,13 @@ export const Default: Story = {
         {...args}
         items={fruits}
       >
-        <Label className='flex-col items-start'>
+        <label
+          htmlFor='combobox'
+          className='flex-col items-start'
+        >
           Select a fruit
           <Combobox.Input placeholder='e.g Apple' />
-        </Label>
+        </label>
 
         <Combobox.Portal>
           <Combobox.Positioner sideOffset={4}>
