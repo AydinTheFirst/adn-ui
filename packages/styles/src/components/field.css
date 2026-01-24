@@ -6,7 +6,7 @@
 /* Label */
 .field .label {
   @apply text-foreground cursor-pointer text-sm font-medium select-none;
-  @apply transition-colors;
+  @apply transition-colors motion-reduce:transition-none;
 
   &[data-required="true"] {
     &::after {
@@ -31,13 +31,14 @@
 .field .select {
   @apply bg-input text-input-foreground border-border rounded-sm border;
   @apply w-full px-3 py-2;
-  @apply transition-all duration-200;
+  @apply transition-all motion-reduce:transition-none;
+  @apply dark:scheme-light-dark;
 
   &:focus-visible {
     @apply status-focused;
   }
 
-  ::placeholder {
+  &::placeholder {
     @apply text-muted-foreground;
   }
 
@@ -45,7 +46,7 @@
     @apply status-disabled;
   }
 
-  &[data-invalid] &:not(:placeholder-shown) {
+  &[data-invalid="true"] {
     @apply border-danger focus:ring-danger;
   }
 }
@@ -58,16 +59,24 @@
   @apply cursor-pointer;
   @apply bg-size-[16px_16px] bg-position-[right_0.75rem_center] bg-no-repeat;
   @apply pr-10;
+
+  & option {
+    @apply bg-background text-foreground;
+  }
+
+  & optgroup {
+    @apply bg-surface text-surface-foreground font-medium;
+  }
 }
 
 /* Checkbox */
 .field .checkbox {
-  @apply border-border size-5 rounded border;
+  @apply border-border size-6 rounded border;
   @apply bg-input text-input-foreground;
   @apply shrink-0 cursor-pointer;
-  @apply transition-all duration-200;
+  @apply transition-all motion-reduce:transition-none;
 
-  &:checked {
+  &[data-checked="true"] {
     @apply bg-primary border-primary;
   }
 
@@ -75,8 +84,16 @@
     @apply status-disabled;
   }
 
-  &[data-invalid] {
+  &[data-invalid="true"] {
     @apply border-danger;
+  }
+
+  .checkbox__indicator {
+    @apply flex items-center justify-center;
+  }
+
+  & svg {
+    @apply size-5;
   }
 }
 
@@ -85,7 +102,7 @@
   @apply border-border size-5 rounded-full border;
   @apply bg-input text-input-foreground;
   @apply shrink-0 cursor-pointer;
-  @apply transition-all duration-200;
+  @apply transition-all motion-reduce:transition-none;
 
   &:focus-visible {
     @apply status-focused;

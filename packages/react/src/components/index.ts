@@ -31,7 +31,7 @@ export * from "~/components/navbar";
 export * from "~/components/context-menu";
 export * from "~/components/combobox";
 export * from "~/components/form";
-export * from "~/components/form-field";
+export * from "~/components/field";
 
 export * from "~/components/preview-card";
 

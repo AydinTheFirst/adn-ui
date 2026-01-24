@@ -2,6 +2,8 @@
 @import "./components/index.css" layer(components);
 
 :root {
+  color-scheme: light;
+
   --navbar-height: 4rem;
   --radius: 0.625rem;
 
@@ -36,6 +38,8 @@
 }
 
 .dark {
+  color-scheme: dark;
+
   --background: var(--black);
   --foreground: var(--white);
 

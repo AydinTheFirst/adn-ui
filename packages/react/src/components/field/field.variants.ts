@@ -3,6 +3,7 @@ import { tv, type VariantProps } from "tailwind-variants";
 export const useFieldVariants = tv({
   slots: {
     checkbox: "checkbox",
+    checkboxIndicator: "checkbox__indicator",
     errorMessage: "error-message",
     helperText: "helper-text",
     input: "input",

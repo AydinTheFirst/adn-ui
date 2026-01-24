@@ -20,7 +20,7 @@ export const FieldRadio = ({ className, value, required, ...props }: FieldRadioP
     <Controller
       name={name}
       control={control}
-      render={({ field, fieldState: { invalid, isDirty, isTouched, isValidating, error } }) => (
+      render={({ field, fieldState: { invalid, error } }) => (
         <input
           type='radio'
           id={`${name}-${value}`}
@@ -30,9 +30,6 @@ export const FieldRadio = ({ className, value, required, ...props }: FieldRadioP
           onBlur={field.onBlur}
           value={value}
           data-invalid={Boolean(invalid)}
-          data-dirty={Boolean(isDirty)}
-          data-touched={Boolean(isTouched)}
-          data-validating={Boolean(isValidating)}
           data-error={Boolean(error)}
           className={cn(slots.radio(), className)}
           required={isRequired || required}

@@ -2,6 +2,7 @@
 
 import type { FieldValues, UseFormReturn } from "react-hook-form";
 
+import { useMemo } from "react";
 import { FormProvider } from "react-hook-form";
 import { cn } from "tailwind-variants";
 
@@ -18,9 +19,11 @@ export const Form = <TFieldValues extends FieldValues = FieldValues>({
   onSubmit,
   className,
   children,
+  spacing,
+  variant,
   ...props
 }: FormProps<TFieldValues>) => {
-  const styles = formVariants({});
+  const styles = useMemo(() => formVariants({ variant, spacing }), [variant, spacing]);
 
   return (
     <FormProvider {...form}>

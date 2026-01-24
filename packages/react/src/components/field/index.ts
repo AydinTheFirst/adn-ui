@@ -1,4 +1,5 @@
 import { FieldCheckbox } from "./field-checkbox";
+import { FieldCheckboxGroup } from "./field-checkbox-group";
 import { FieldErrorMessage } from "./field-error-message";
 import { FieldHelperText } from "./field-helper-text";
 import { FieldInput } from "./field-input";
@@ -10,6 +11,7 @@ import { FieldSelect } from "./field-select";
 import { FieldTextArea } from "./field-textarea";
 
 export { FieldCheckbox, type FieldCheckboxProps } from "./field-checkbox";
+export { FieldCheckboxGroup, type FieldCheckboxGroupProps } from "./field-checkbox-group";
 export { FieldErrorMessage, type FieldErrorMessageProps } from "./field-error-message";
 export { FieldHelperText, type FieldHelperTextProps } from "./field-helper-text";
 export { FieldInput, type FieldInputProps } from "./field-input";
@@ -22,6 +24,7 @@ export { FieldTextArea, type FieldTextAreaProps } from "./field-textarea";
 
 export const Field = Object.assign(FieldRoot, {
   Checkbox: FieldCheckbox,
+  CheckboxGroup: FieldCheckboxGroup,
   ErrorMessage: FieldErrorMessage,
   HelperText: FieldHelperText,
   Input: FieldInput,

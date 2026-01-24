@@ -1,20 +1,28 @@
 /** Base Styling */
 .form {
-  @apply flex w-full flex-col gap-6;
+  @apply w-full max-w-md;
 }
 
 /* Form spacing variants */
 .form--compact {
+  @apply gap-2;
+}
+
+.form--default {
   @apply gap-4;
 }
 
 .form--relaxed {
-  @apply gap-8;
+  @apply gap-6;
 }
 
 /* Form layout variants */
 .form--inline {
   @apply flex-row flex-wrap items-end;
+}
+
+.form--stacked {
+  @apply flex flex-col;
 }
 
 .form--grid {

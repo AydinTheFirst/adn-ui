@@ -16,8 +16,8 @@ export const FieldLabel = ({ className, children, ...props }: FieldLabelProps) =
     <label
       htmlFor={name}
       className={cn(slots.label(), className)}
-      {...props}
       data-required={Boolean(isRequired)}
+      {...props}
     >
       {children}
     </label>

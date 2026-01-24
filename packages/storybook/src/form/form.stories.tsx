@@ -32,7 +32,6 @@ export const BasicForm: Story = {
         <Form
           form={form}
           onSubmit={(data) => console.log(data)}
-          className='w-full max-w-md space-y-4'
         >
           <Field
             name='email'
@@ -99,7 +98,6 @@ export const WithValidation: Story = {
         <Form
           form={form}
           onSubmit={(data) => alert(JSON.stringify(data, null, 2))}
-          className='w-full max-w-md space-y-4'
         >
           <Field
             name='email'
@@ -185,7 +183,6 @@ export const CompleteForm: Story = {
         <Form
           form={form}
           onSubmit={(data) => alert(JSON.stringify(data, null, 2))}
-          className='w-full max-w-2xl space-y-6'
         >
           <h2 className='text-2xl font-bold'>Profile Settings</h2>
 

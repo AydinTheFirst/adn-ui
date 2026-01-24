@@ -33,15 +33,24 @@ export const Vertical: Story = {
               orientation='vertical'
               className='space-y-2'
             >
-              <Field.Label className='flex items-center gap-2'>
+              <Field.Label
+                htmlFor='plan-free'
+                className='flex items-center gap-2'
+              >
                 <Field.Radio value='free' />
                 <span>Free - $0/month</span>
               </Field.Label>
-              <Field.Label className='flex items-center gap-2'>
+              <Field.Label
+                htmlFor='plan-pro'
+                className='flex items-center gap-2'
+              >
                 <Field.Radio value='pro' />
                 <span>Pro - $10/month</span>
               </Field.Label>
-              <Field.Label className='flex items-center gap-2'>
+              <Field.Label
+                htmlFor='plan-enterprise'
+                className='flex items-center gap-2'
+              >
                 <Field.Radio value='enterprise' />
                 <span>Enterprise - $50/month</span>
               </Field.Label>
@@ -70,19 +79,31 @@ export const Horizontal: Story = {
               orientation='horizontal'
               className='flex gap-4'
             >
-              <Field.Label className='flex items-center gap-2'>
+              <Field.Label
+                htmlFor='size-small'
+                className='flex items-center gap-2'
+              >
                 <Field.Radio value='small' />
                 <span>S</span>
               </Field.Label>
-              <Field.Label className='flex items-center gap-2'>
+              <Field.Label
+                htmlFor='size-medium'
+                className='flex items-center gap-2'
+              >
                 <Field.Radio value='medium' />
                 <span>M</span>
               </Field.Label>
-              <Field.Label className='flex items-center gap-2'>
+              <Field.Label
+                htmlFor='size-large'
+                className='flex items-center gap-2'
+              >
                 <Field.Radio value='large' />
                 <span>L</span>
               </Field.Label>
-              <Field.Label className='flex items-center gap-2'>
+              <Field.Label
+                htmlFor='size-xlarge'
+                className='flex items-center gap-2'
+              >
                 <Field.Radio value='xlarge' />
                 <span>XL</span>
               </Field.Label>
@@ -111,7 +132,10 @@ export const WithDescriptions: Story = {
               orientation='vertical'
               className='space-y-3'
             >
-              <Field.Label className='flex items-start gap-2'>
+              <Field.Label
+                htmlFor='shipping-standard'
+                className='flex items-start gap-2'
+              >
                 <Field.Radio
                   value='standard'
                   className='mt-1'
@@ -121,7 +145,10 @@ export const WithDescriptions: Story = {
                   <div className='text-sm text-gray-600'>5-7 business days - Free</div>
                 </div>
               </Field.Label>
-              <Field.Label className='flex items-start gap-2'>
+              <Field.Label
+                htmlFor='shipping-express'
+                className='flex items-start gap-2'
+              >
                 <Field.Radio
                   value='express'
                   className='mt-1'
@@ -131,7 +158,10 @@ export const WithDescriptions: Story = {
                   <div className='text-sm text-gray-600'>2-3 business days - $9.99</div>
                 </div>
               </Field.Label>
-              <Field.Label className='flex items-start gap-2'>
+              <Field.Label
+                htmlFor='shipping-overnight'
+                className='flex items-start gap-2'
+              >
                 <Field.Radio
                   value='overnight'
                   className='mt-1'
@@ -166,18 +196,27 @@ export const Disabled: Story = {
               orientation='vertical'
               className='space-y-2'
             >
-              <Field.Label className='flex items-center gap-2'>
+              <Field.Label
+                htmlFor='payment-card'
+                className='flex items-center gap-2'
+              >
                 <Field.Radio value='card' />
                 <span>Credit Card</span>
               </Field.Label>
-              <Field.Label className='flex items-center gap-2 opacity-50'>
+              <Field.Label
+                htmlFor='payment-paypal'
+                className='flex items-center gap-2 opacity-50'
+              >
                 <Field.Radio
                   value='paypal'
                   disabled
                 />
                 <span>PayPal (Coming Soon)</span>
               </Field.Label>
-              <Field.Label className='flex items-center gap-2 opacity-50'>
+              <Field.Label
+                htmlFor='payment-crypto'
+                className='flex items-center gap-2 opacity-50'
+              >
                 <Field.Radio
                   value='crypto'
                   disabled
