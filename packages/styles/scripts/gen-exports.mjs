@@ -11,6 +11,7 @@ const files = fs.readdirSync(componentsDir);
 
 const importStatements = `${files
   .filter((file) => file !== "index.css" && path.extname(file) === ".css")
+  .sort()
   .map((file) => `@import "./${file}";`)
   .join("\n")}\n`;
 
