@@ -1,4 +1,0 @@
-/** Base Styling */
-.checkbox-group {
-  @apply flex flex-col gap-4;
-}

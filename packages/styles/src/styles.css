@@ -93,7 +93,7 @@
 }
 
 @utility status-focused {
-  @apply ring-offset-background ring-2 ring-offset-2 outline-none;
+  @apply focus:ring-ring focus:ring-offset-background focus:ring-2 focus:ring-offset-2 focus:outline-none;
 }
 
 @utility status-disabled {
