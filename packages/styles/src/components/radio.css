@@ -8,7 +8,7 @@
     @apply status-focused;
   }
 
-  &:checked {
+  &[data-checked="true"] {
     @apply bg-primary border-primary;
     @apply shadow-[inset_0_0_0_3px_var(--color-input)];
   }
@@ -19,5 +19,14 @@
 
   &[data-invalid] {
     @apply border-danger;
+  }
+}
+
+.radio__indicator {
+  @apply flex h-full items-center justify-center;
+
+  &::before {
+    content: "";
+    @apply bg-primary block size-2 rounded-full;
   }
 }

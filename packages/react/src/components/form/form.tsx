@@ -8,21 +8,22 @@ import { cn } from "tailwind-variants";
 
 import { type FormVariants, formVariants } from "./form.variants";
 
-export interface FormProps<TFieldValues extends FieldValues = FieldValues>
-  extends FormVariants, Omit<React.ComponentProps<"form">, "onSubmit"> {
-  form: UseFormReturn<TFieldValues>;
-  onSubmit: (data: TFieldValues) => void | Promise<void>;
+interface PureFormProps extends Omit<React.ComponentProps<"form">, "onSubmit"> {}
+
+export interface FormProps<T extends FieldValues> extends FormVariants, PureFormProps {
+  form: UseFormReturn<T, any>;
+  onSubmit: (data: T) => void | Promise<void>;
 }
 
-export const Form = <TFieldValues extends FieldValues = FieldValues>({
-  form,
-  onSubmit,
-  className,
-  children,
+export const Form = <T extends FieldValues>({
   spacing,
   variant,
+  className,
+  children,
+  form,
+  onSubmit,
   ...props
-}: FormProps<TFieldValues>) => {
+}: FormProps<T>) => {
   const styles = useMemo(() => formVariants({ variant, spacing }), [variant, spacing]);
 
   return (

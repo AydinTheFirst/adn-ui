@@ -1,1 +1,4 @@
 /* Radio Group Styles */
+.radio-group {
+  @apply flex flex-col gap-2;
+}

@@ -238,6 +238,7 @@ export const CompleteForm: Story = {
             <Field.RadioGroup
               orientation='vertical'
               className='space-y-2'
+              defaultValue={"all"}
             >
               <Field.Label className='flex items-center gap-2'>
                 <Field.Radio value='all' />

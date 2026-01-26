@@ -5,9 +5,9 @@ import { cn } from "tailwind-variants";
 
 import { radioVariants, type RadioVariants } from "./radio.variants";
 
-export interface RadioProps extends RadioVariants, BaseRadio.Root.Props {}
+export interface RadioRootProps extends RadioVariants, BaseRadio.Root.Props {}
 
-export const Radio = ({ className, ...props }: RadioProps) => {
+export const RadioRoot = ({ className, ...props }: RadioRootProps) => {
   const slots = radioVariants();
 
   return (
