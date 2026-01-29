@@ -1,0 +1,3 @@
+.surface {
+  @apply bg-surface text-surface-foreground rounded p-4 shadow;
+}
