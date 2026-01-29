@@ -19,7 +19,7 @@
   "author": "Halil Aydın <aydinhalil980@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AydinTheFirst/adn-ui.git",
+    "url": "git+https://github.com/awaiden/adn-ui.git",
     "directory": "packages/react"
   },
   "files": [
