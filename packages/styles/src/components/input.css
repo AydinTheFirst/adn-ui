@@ -10,7 +10,7 @@
   }
 
   &::placeholder {
-    @apply text-muted-foreground;
+    @apply text-muted-foreground text-sm;
   }
 
   &:disabled {

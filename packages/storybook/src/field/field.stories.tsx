@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Button, Field, Form } from "@adn-ui/react";
+import { LucideUser } from "lucide-react";
 import { useForm } from "react-hook-form";
 
 const meta: Meta<typeof Field> = {
@@ -41,9 +42,45 @@ export const Input: Story = {
               type='email'
               placeholder='Enter your email'
             />
-            <Field.HelperText>We'll never share your email with anyone else.</Field.HelperText>
+            <Field.Description>We'll never share your email with anyone else.</Field.Description>
             <Field.ErrorMessage />
           </Field>
+        </Form>
+      </Container>
+    );
+  },
+};
+
+export const WithGroup: Story = {
+  render: () => {
+    const form = useForm({
+      defaultValues: {
+        username: "",
+        domain: "example.com",
+      },
+    });
+
+    return (
+      <Container>
+        <Form
+          form={form}
+          onSubmit={(data) => console.log(data)}
+          className='w-full max-w-md'
+        >
+          <Field.Root
+            name='username'
+            isRequired
+          >
+            <Field.Label>Username</Field.Label>
+            <Field.Group>
+              <Field.Prefix className='text-muted-foreground'>
+                <LucideUser />
+              </Field.Prefix>
+              <Field.Input placeholder='Enter your username' />
+              <Field.Suffix>@</Field.Suffix>
+            </Field.Group>
+            <Field.ErrorMessage />
+          </Field.Root>
         </Form>
       </Container>
     );
@@ -71,7 +108,7 @@ export const TextArea: Story = {
               placeholder='Enter your message'
               rows={4}
             />
-            <Field.HelperText>Maximum 500 characters.</Field.HelperText>
+            <Field.Description>Maximum 500 characters.</Field.Description>
             <Field.ErrorMessage />
           </Field>
         </Form>
@@ -104,7 +141,7 @@ export const Select: Story = {
               <option value='ca'>Canada</option>
               <option value='tr'>Turkey</option>
             </Field.Select>
-            <Field.HelperText>Choose your country of residence.</Field.HelperText>
+            <Field.Description>Choose your country of residence.</Field.Description>
             <Field.ErrorMessage />
           </Field>
         </Form>
@@ -133,7 +170,7 @@ export const Checkbox: Story = {
               <Field.Checkbox />
               <span>I agree to the terms and conditions</span>
             </Field.Label>
-            <Field.HelperText>You must agree to continue.</Field.HelperText>
+            <Field.Description>You must agree to continue.</Field.Description>
             <Field.ErrorMessage />
           </Field>
         </Form>
@@ -176,7 +213,7 @@ export const Radio: Story = {
                 <span>Enterprise Plan - $50/month</span>
               </Field.Label>
             </Field.RadioGroup>
-            <Field.HelperText>Choose the plan that fits your needs.</Field.HelperText>
+            <Field.Description>Choose the plan that fits your needs.</Field.Description>
             <Field.ErrorMessage />
           </Field>
         </Form>
@@ -232,7 +269,7 @@ export const MultipleFields: Story = {
               type='tel'
               placeholder='+1 (555) 000-0000'
             />
-            <Field.HelperText>Include country code.</Field.HelperText>
+            <Field.Description>Include country code.</Field.Description>
             <Field.ErrorMessage />
           </Field>
 

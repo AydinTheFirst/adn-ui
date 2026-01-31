@@ -19,7 +19,6 @@ export * from "~/components/drawer";
 export * from "~/components/error-message";
 export * from "~/components/field";
 export * from "~/components/form";
-export * from "~/components/helper-text";
 export * from "~/components/icon-button";
 export * from "~/components/input";
 export * from "~/components/label";

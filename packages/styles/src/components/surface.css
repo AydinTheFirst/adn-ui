@@ -1,3 +1,4 @@
 .surface {
-  @apply bg-surface text-surface-foreground rounded p-4 shadow;
+  @apply bg-surface text-surface-foreground rounded shadow;
+  @apply w-full max-w-md p-4;
 }

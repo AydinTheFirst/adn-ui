@@ -12,17 +12,19 @@ export const buttonVariants = tv({
       true: "button--icon-only",
     },
     size: {
+      xl: "button--xl",
       lg: "button--lg",
       md: "button--md",
       sm: "button--sm",
     },
     variant: {
+      default: "button--default",
       danger: "button--danger",
       ghost: "button--ghost",
       outline: "button--outline",
       primary: "button--primary",
       secondary: "button--secondary",
-      field: "button--field",
+      success: "button--success",
     },
   },
 });

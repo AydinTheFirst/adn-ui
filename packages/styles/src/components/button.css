@@ -24,15 +24,15 @@
     @apply status-pending;
   }
 
-  svg {
-    @apply size-5 shrink-0;
+  & svg {
+    @apply size-5;
   }
 }
 
 .button--sm {
   @apply h-8 text-sm;
 
-  svg {
+  & svg {
     @apply size-4;
   }
 }
@@ -43,6 +43,14 @@
 
 .button--lg {
   @apply h-12;
+}
+
+.button--xl {
+  @apply h-14 text-lg;
+
+  & svg {
+    @apply size-6;
+  }
 }
 
 .button--primary {
@@ -61,22 +69,34 @@
   @apply bg-danger text-danger-foreground hover-safe:bg-danger/90;
 }
 
+.button--success {
+  @apply bg-success text-success-foreground hover-safe:bg-success/90;
+}
+
 .button--ghost {
   @apply text-foreground hover-safe:bg-secondary border-0 bg-transparent;
 }
 
-.button--field {
-  @apply bg-input text-input-foreground hover-safe:bg-input/90;
-}
-
 .button--icon-only {
   @apply size-10;
+
+  & svg {
+    @apply size-5;
+  }
 }
 
 .button--icon-only.button--sm {
   @apply size-8;
+
+  & svg {
+    @apply size-4;
+  }
 }
 
 .button--icon-only.button--lg {
   @apply size-12;
+
+  & svg {
+    @apply size-6;
+  }
 }

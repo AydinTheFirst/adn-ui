@@ -122,6 +122,11 @@
 }
 
 @layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
   * {
     @apply border-border outline-ring/50;
   }
@@ -132,9 +137,5 @@
 
   .root {
     @apply isolate antialiased;
-  }
-
-  .container {
-    @apply mx-auto px-4;
   }
 }

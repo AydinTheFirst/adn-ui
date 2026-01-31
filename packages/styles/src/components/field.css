@@ -3,5 +3,29 @@
 }
 
 .field[data-disabled] {
-  @apply pointer-events-none opacity-50;
+  @apply status-disabled;
+}
+
+.field__group {
+  @apply relative;
+
+  &:has(.field__prefix) input {
+    @apply pl-10;
+  }
+
+  &:has(.field__suffix) input {
+    @apply pr-10;
+  }
+
+  & .field__prefix {
+    @apply absolute top-1/2 left-3 -translate-y-1/2;
+  }
+
+  & .field__suffix {
+    @apply absolute top-1/2 right-3 -translate-y-1/2;
+  }
+
+  & svg {
+    @apply size-5;
+  }
 }

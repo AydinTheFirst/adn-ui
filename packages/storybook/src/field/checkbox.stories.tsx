@@ -109,7 +109,7 @@ export const Disabled: Story = {
               <Field.Checkbox disabled />
               <span>Email verified</span>
             </Field.Label>
-            <Field.HelperText>This field is disabled.</Field.HelperText>
+            <Field.Description>This field is disabled.</Field.Description>
           </Field>
         </Form>
       </Container>

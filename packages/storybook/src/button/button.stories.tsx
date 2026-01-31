@@ -61,6 +61,17 @@ export const Outline: Story = {
   },
 };
 
+export const WithIcon: Story = {
+  args: {
+    children: (
+      <>
+        <LucideThumbsUp className='mr-2' />
+        Like
+      </>
+    ),
+  },
+};
+
 export const IconOnly: Story = {
   args: {
     isIconOnly: true,

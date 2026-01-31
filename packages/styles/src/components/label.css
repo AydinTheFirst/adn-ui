@@ -1,5 +1,5 @@
 .label {
-  @apply text-foreground cursor-pointer text-sm font-medium select-none;
+  @apply text-foreground cursor-pointer font-medium select-none;
   @apply transition-colors motion-reduce:transition-none;
 
   &[data-required="true"] {

@@ -97,7 +97,7 @@ export const Disabled: Story = {
               <option value='user'>User</option>
               <option value='admin'>Admin</option>
             </Field.Select>
-            <Field.HelperText>This field is disabled.</Field.HelperText>
+            <Field.Description>This field is disabled.</Field.Description>
           </Field>
         </Form>
       </Container>

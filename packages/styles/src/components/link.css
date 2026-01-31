@@ -4,8 +4,8 @@
   @apply inline-flex items-center gap-1;
   @apply transition-colors motion-reduce:transition-none;
 
-  &svg {
-    @apply size-4;
+  & svg {
+    @apply size-5;
   }
 }
 

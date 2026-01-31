@@ -12,7 +12,10 @@
 }
 
 .dialog__popup {
-  @apply w-full max-w-lg px-2;
+  max-width: calc(100vw - 2rem);
+  @apply w-full md:max-w-md;
+
+  @apply bg-surface text-surface-foreground rounded border p-4 shadow;
 
   @apply fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 
@@ -22,10 +25,6 @@
   &[data-ending-style] {
     @apply scale-90 opacity-0;
   }
-}
-
-.dialog__content {
-  @apply bg-surface text-surface-foreground relative rounded border p-4 shadow;
 }
 
 .dialog__title {

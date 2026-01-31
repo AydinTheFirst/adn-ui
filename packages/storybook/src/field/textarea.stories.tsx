@@ -54,7 +54,7 @@ export const WithRows: Story = {
               placeholder='Tell us about yourself...'
               rows={6}
             />
-            <Field.HelperText>Maximum 500 characters.</Field.HelperText>
+            <Field.Description>Maximum 500 characters.</Field.Description>
             <Field.ErrorMessage />
           </Field>
         </Form>
@@ -79,7 +79,7 @@ export const Disabled: Story = {
               disabled
               rows={4}
             />
-            <Field.HelperText>This field is disabled.</Field.HelperText>
+            <Field.Description>This field is disabled.</Field.Description>
           </Field>
         </Form>
       </Container>
@@ -104,7 +104,7 @@ export const WithMaxLength: Story = {
               maxLength={200}
               rows={4}
             />
-            <Field.HelperText>Maximum 200 characters.</Field.HelperText>
+            <Field.Description>Maximum 200 characters.</Field.Description>
             <Field.ErrorMessage />
           </Field>
         </Form>

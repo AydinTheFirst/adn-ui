@@ -63,7 +63,7 @@ export const Email: Story = {
               type='email'
               placeholder='john@example.com'
             />
-            <Field.HelperText>We'll never share your email.</Field.HelperText>
+            <Field.Description>We'll never share your email.</Field.Description>
             <Field.ErrorMessage />
           </Field>
         </Form>
@@ -91,7 +91,7 @@ export const Password: Story = {
               type='password'
               placeholder='••••••••'
             />
-            <Field.HelperText>Minimum 8 characters.</Field.HelperText>
+            <Field.Description>Minimum 8 characters.</Field.Description>
             <Field.ErrorMessage />
           </Field>
         </Form>
@@ -142,7 +142,7 @@ export const Tel: Story = {
               type='tel'
               placeholder='+1 (555) 000-0000'
             />
-            <Field.HelperText>Include country code.</Field.HelperText>
+            <Field.Description>Include country code.</Field.Description>
             <Field.ErrorMessage />
           </Field>
         </Form>
@@ -212,7 +212,7 @@ export const Disabled: Story = {
               disabled
               placeholder='Cannot edit'
             />
-            <Field.HelperText>This field is disabled.</Field.HelperText>
+            <Field.Description>This field is disabled.</Field.Description>
           </Field>
         </Form>
       </Container>

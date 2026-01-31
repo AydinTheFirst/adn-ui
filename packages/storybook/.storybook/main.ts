@@ -4,7 +4,11 @@ import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const config: StorybookConfig = {
-  addons: [getAbsolutePath("@storybook/addon-themes"), getAbsolutePath("@storybook/addon-docs")],
+  addons: [
+    getAbsolutePath("@storybook/addon-themes"),
+    getAbsolutePath("@storybook/addon-docs"),
+    getAbsolutePath("@storybook/addon-vitest"),
+  ],
   framework: getAbsolutePath("@storybook/react-vite"),
   stories: ["../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   core: {

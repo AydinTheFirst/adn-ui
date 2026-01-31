@@ -42,7 +42,7 @@ export const BasicForm: Story = {
               type='email'
               placeholder='Enter your email'
             />
-            <Field.HelperText>Please enter a valid email address.</Field.HelperText>
+            <Field.Description>Please enter a valid email address.</Field.Description>
             <Field.ErrorMessage />
           </Field>
 
@@ -55,7 +55,7 @@ export const BasicForm: Story = {
               type='password'
               placeholder='Enter your password'
             />
-            <Field.HelperText>Your password must be at least 8 characters long.</Field.HelperText>
+            <Field.Description>Your password must be at least 8 characters long.</Field.Description>
             <Field.ErrorMessage />
           </Field>
 
@@ -215,7 +215,7 @@ export const CompleteForm: Story = {
               placeholder='Tell us about yourself...'
               rows={4}
             />
-            <Field.HelperText>Maximum 500 characters.</Field.HelperText>
+            <Field.Description>Maximum 500 characters.</Field.Description>
             <Field.ErrorMessage />
           </Field>
 

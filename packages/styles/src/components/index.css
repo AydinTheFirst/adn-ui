@@ -13,12 +13,12 @@
 @import "./collapsible.css";
 @import "./combobox.css";
 @import "./context-menu.css";
+@import "./description.css";
 @import "./dialog.css";
 @import "./drawer.css";
 @import "./error-message.css";
 @import "./field.css";
 @import "./form.css";
-@import "./helper-text.css";
 @import "./input.css";
 @import "./label.css";
 @import "./link.css";
@@ -38,6 +38,7 @@
 @import "./sidebar.css";
 @import "./slider.css";
 @import "./spinner.css";
+@import "./surface.css";
 @import "./switch.css";
 @import "./table.css";
 @import "./tabs.css";
@@ -46,4 +47,3 @@
 @import "./toast.css";
 @import "./toggle-button.css";
 @import "./tooltip.css";
-@import "./surface.css";
